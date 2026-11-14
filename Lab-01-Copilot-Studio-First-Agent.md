@@ -27,7 +27,7 @@ By the end of this lab, you will have:
 1. Open a new browser tab and sign in to [Copilot Studio](https://copilotstudio.microsoft.com)
 2. Choose your country/region and select **Start free trial** (skip if you already have a license)
 3. Select **Skip**
-4. Select the environment picker in the upper right and select your environment. This should be the environment you created in the Power Apps Developer Plan.
+4. Select the environment picker and select your environment. This should be the environment assigned to you to create the solution.
 
 ### 1.2 Create a Solution
 1. Select the **...** (ellipsis) in the left navigation bar and select **Solutions**
