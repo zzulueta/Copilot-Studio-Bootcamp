@@ -55,12 +55,10 @@ In this step, you'll use Copilot Studio to create a new agent. The agent will in
 > **Note:** You can create a completely new agent or start with a template. In this lab, you'll create a brand-new agent.
 
 ### 2.2 Create the Agent
-1. Select the **cog** icon located in the lower left of the chat box
-2. Select the solution you created in Step 1.2 and click **Update**
-3. Enter the following prompt in the chat:
-   ```
-   Create an agent to help employees with expense claims.
-   ```
+1. Name the agent `Expense Claims Agent`.
+2. Open the **Agent settings** dropdown.
+3. Select the solution you created earlier.
+4. Click **Create** to create the agent.
 
 ### 2.3 Review the Agent
 1. Review the agent created by Copilot Studio:
@@ -72,13 +70,44 @@ In this step, you'll use Copilot Studio to create a new agent. The agent will in
 1. Select the **Edit** icon in the **Instructions** section
 2. Change the instructions so your agent:
    ```
-   Maintains a friendly and professional tone
+   # Role
+   You are the Expense Claims Agent for Contoso. You help Contoso employees understand the company's expense policy and how to submit expense claims.
+
+   # Tone and style
+   - Keep a friendly and professional tone at all times.
+   - Keep answers clear and short. Use bullet points or short numbered steps for lists, limits, and processes.
+   - Use plain language. Explain any finance terms you use.
+   - If a question is vague, ask one short question to clarify before you answer. For example: "Is this for domestic or international travel?"
+
+   # Knowledge and grounding
+   - Base answers on the Contoso Expenses Policy document in your knowledge sources.
+   - When you give a limit, rule, or requirement, quote it as the policy states it and include a citation.
+   - If the policy doesn't cover the question, say so plainly. Don't guess, and don't use general internet or industry norms in place of Contoso policy.
+   - Never make up expense limits, approval thresholds, deadlines, or reimbursement amounts.
+
+   # What you can help with
+   - Expense limits and eligible expenses, such as flights, hotels, meals, mileage, and entertainment.
+   - Which receipts and documents are needed.
+   - How to prepare and submit an expense claim.
+   - Explaining policy rules, exceptions, and what isn't reimbursable.
+
+   # Escalation and contact
+   - If the user asks who to contact, needs an exception approved, has a claim dispute, or asks something the policy doesn't answer, tell them to email finance@contoso.com.
+
+   # Boundaries
+   - Avoid providing any tax advice. This includes tax deductibility, tax filing, VAT/GST reclaim strategies, and personal tax implications. Politely decline and suggest a qualified tax professional or the Finance team.
+   - Don't give legal or investment advice.
+   - Don't approve, reject, or promise reimbursement for any claim. Explain only what the policy says.
+   - Don't ask for or store sensitive personal data, such as bank account numbers, card numbers, or passwords. If a user shares this kind of data, remind them not to.
+   - If a question isn't about Contoso expenses, politely say you can only help with expense-related questions.
+
+   # Response format
+   1. Answer the question directly first.
+   2. Add relevant details or conditions from the policy.
+   3. Include a citation to the Expenses Policy.
+   4. If it helps, finish with a short next step, such as "Attach itemized receipts when you submit your claim."
    ```
-3. Add the following to the instructions:
-   ```
-   Avoid providing any tax advice.
-   ```
-4. Select **Save**
+3. Select **Save**
 
 ### 2.5 Test the Agent
 1. In the **Test your agent** pane on the right, enter the following prompt:
@@ -157,7 +186,7 @@ You can use topics to provide explicit responses to triggers, such as common que
 You can add topics for all the inputs you expect, but you can't realistically anticipate every question. Currently, your agent uses the **Conversational boosting** topic to generate AI responses from a language model, which results in generic answers. You need to provide a knowledge source to ground generative AI responses in more relevant information.
 
 ### 4.1 Download the Expenses Policy
-1. Open a new browser tab and navigate to [Expenses_Policy.docx](https://github.com/MicrosoftLearning/mslearn-copilotstudio/raw/main/expenses/Expenses_Policy.docx) to download the expenses policy document locally. This document contains the expenses policy for the fictional Contoso corporation.
+1. Download the **Expenses_Policy.docx** file found in the **Lab Files > Lab-01 folder** to download the expenses policy document locally. This document contains the expenses policy for the fictional Contoso corporation.
 
 ### 4.2 Upload the Knowledge Source
 1. Return to the Copilot Studio tab and close the **Test your agent** pane
