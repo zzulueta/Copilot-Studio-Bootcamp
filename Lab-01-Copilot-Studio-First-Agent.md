@@ -155,6 +155,7 @@ You can use topics to provide explicit responses to triggers, such as common que
 
 ### 3.2 Create a Topic with Copilot
 1. On the **Topics** page, in the **+ Add a topic** menu, select **Topic** > **Add from description with Copilot**
+> If prompted, select **Allow** to let the browser see text and images copied to the clipboard
 2. In the **Add from description with Copilot** dialog, configure the topic:
    - **Name:** `Ask about expenses contact`
    - **Description:**
@@ -162,12 +163,11 @@ You can use topics to provide explicit responses to triggers, such as common que
      When the user asks who to contact about expense claims, tell them to send an email to finance@contoso.com
      ```
 3. Select **Create**
-4. If prompted, select **Allow** to let the browser see text and images copied to the clipboard
-5. After a short wait, a new topic named **Ask about expenses contact** is created and opened in the authoring canvas. It should be triggered by phrases asking about a contact for expenses, and respond with a message telling the user to email the appropriate address.
+4. After a short wait, a new topic named **Ask about expenses contact** is created and opened in the authoring canvas. It should be triggered by phrases asking about a contact for expenses, and respond with a message telling the user to email the appropriate address.
 
 > **Important:** If the nodes in the topic don't match this description, delete the topic and create it again.
 
-6. Select **Save** (top right) to save the new topic
+5. Select **Save** (top right) to save the new topic
 
 ### 3.3 Test the New Topic
 1. Open the **Test** pane and enter the following prompt:
