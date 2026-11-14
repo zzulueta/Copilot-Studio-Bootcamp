@@ -23,14 +23,12 @@ By the end of this lab, you will have:
 
 ## Step 1: Set Up the Solution
 
-### 1.1 Sign In to Copilot Studio
-1. Open a new browser tab and sign in to [Copilot Studio](https://copilotstudio.microsoft.com)
-2. Choose your country/region and select **Start free trial** (skip if you already have a license)
-3. Select **Skip**
-4. Select the environment picker and select your environment. This should be the environment assigned to you to create the solution.
+### 1.1 Sign In to Power Apps
+1. Open a new browser tab and sign in to [Power Apps](https://make.powerapps.com/)
+2. Select the environment picker and select your environment. This should be the environment assigned to you to create the solution.
 
 ### 1.2 Create a Solution
-1. Select the **...** (ellipsis) in the left navigation bar and select **Solutions**
+1. Select **Solutions** in the left navigation pane
 2. Select **+ New solution** in the upper left
 3. Configure the solution:
    - **Display name:** `Copilot Agent <FirstName> <LastName>` (use your first and last name to make it unique)
@@ -50,14 +48,14 @@ In this step, you'll use Copilot Studio to create a new agent. The agent will in
 
 ### 2.1 Open Copilot Studio
 1. In a web browser, navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and sign in if prompted
-2. Check the environment in the upper right and make sure you are in the correct environment. If not, select the environment you created from your Developer Plan.
+2. Select the environment picker and make sure you are in the correct environment.
 3. In the navigation pane on the left, select **Agents**. This page shows all the agents you have created previously.
 
 > **Note:** You can create a completely new agent or start with a template. In this lab, you'll create a brand-new agent.
 
 ### 2.2 Create the Agent
 1. Select the **cog** icon located in the lower left of the chat box
-2. Select the solution you created in Step 1.3 and click **Update**
+2. Select the solution you created in Step 1.2 and click **Update**
 3. Enter the following prompt in the chat:
    ```
    Create an agent to help employees with expense claims.
