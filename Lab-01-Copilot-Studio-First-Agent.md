@@ -29,7 +29,7 @@ By the end of this lab, you will have:
 
 ### 1.2 Create a Solution
 1. Select **Solutions** in the left navigation pane
-2. Select **+ New solution** in the upper left
+2. Select **+ New solution**
 3. Configure the solution:
    - **Display name:** `Copilot Agent <FirstName> <LastName>` (use your first and last name to make it unique)
 4. Select **+ New publisher** and configure it:
