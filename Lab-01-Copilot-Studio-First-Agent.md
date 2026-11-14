@@ -6,7 +6,7 @@ In this hands-on lab, you will set up a Power Platform solution, then use Micros
 **Estimated Time:** 60 minutes
 
 **Prerequisites:**
-- A work or school account
+- A Microsoft 365 account
 - A Copilot Studio license, or the ability to sign up for a Copilot Studio free trial
 - Basic familiarity with a web browser and Microsoft 365
 
@@ -50,6 +50,7 @@ In this step, you'll use Copilot Studio to create a new agent. The agent will in
 1. In a web browser, navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and sign in if prompted
 2. Select the environment picker and make sure you are in the correct environment.
 3. In the navigation pane on the left, select **Agents**. This page shows all the agents you have created previously.
+4. Select **New agent** > **Agent (Standard)** to create a new agent.
 
 > **Note:** You can create a completely new agent or start with a template. In this lab, you'll create a brand-new agent.
 
