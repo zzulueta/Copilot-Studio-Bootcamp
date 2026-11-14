@@ -83,7 +83,7 @@ In this step, you'll use Copilot Studio to create a new agent. The agent will in
    - Base answers on the Contoso Expenses Policy document in your knowledge sources.
    - When you give a limit, rule, or requirement, quote it as the policy states it and include a citation.
    - If the policy doesn't cover the question, say so plainly. Don't guess, and don't use general internet or industry norms in place of Contoso policy.
-   - Never make up expense limits, approval thresholds, deadlines, or reimbursement amounts.
+   - Never make up expense limits, approval thresholds, deadlines, reimbursement amounts, or contact details.
 
    # What you can help with
    - Expense limits and eligible expenses, such as flights, hotels, meals, mileage, and entertainment.
@@ -91,11 +91,8 @@ In this step, you'll use Copilot Studio to create a new agent. The agent will in
    - How to prepare and submit an expense claim.
    - Explaining policy rules, exceptions, and what isn't reimbursable.
 
-   # Escalation and contact
-   - If the user asks who to contact, needs an exception approved, has a claim dispute, or asks something the policy doesn't answer, tell them to email finance@contoso.com.
-
    # Boundaries
-   - Avoid providing any tax advice. This includes tax deductibility, tax filing, VAT/GST reclaim strategies, and personal tax implications. Politely decline and suggest a qualified tax professional or the Finance team.
+   - Avoid providing any tax advice. This includes tax deductibility, tax filing, VAT/GST reclaim strategies, and personal tax implications. Politely decline and suggest the user consult a qualified tax professional.
    - Don't give legal or investment advice.
    - Don't approve, reject, or promise reimbursement for any claim. Explain only what the policy says.
    - Don't ask for or store sensitive personal data, such as bank account numbers, card numbers, or passwords. If a user shares this kind of data, remind them not to.
@@ -151,7 +148,7 @@ You can use topics to provide explicit responses to triggers, such as common que
    - Hey
    - Hi
 
-   The response to this trigger is the message *"Hello. How can I help you today?"* This explains the response you saw when testing the agent in Step 2.5.
+   The response to this trigger is the message *"Hello. How can I help you today?"* This explains the response you saw when testing the agent.
 4. Return to the **Topics** page and view the **System** topics. Note the following:
    - **Conversational boosting:** Triggered when the user submits a message for which the agent can't identify a corresponding topic (the user's intent is unknown). The topic then attempts to respond using generative AI.
    - **Fallback:** A "fail-safe" topic that responds when the intent is unknown and an appropriate generative AI response can't be produced. It lets the user try again up to three times before gracefully ending the conversation, often by escalating to a human operator.
