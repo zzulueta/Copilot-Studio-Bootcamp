@@ -156,7 +156,7 @@ In this step, you will configure authentication for a demo, publish the complete
 2. Select **Publish** again to publish the current changes
 
 ### 4.3 Test the Demo Website
-1. Select the ellipsis **…** next to **Settings** and select **Go to demo website**
+1. Select the **Channels** tab and select **Demo website**. Copy the demo website URL to a browser and open it.
 2. In **Type your message**, enter:
    ```
    I want to book a property showing.
