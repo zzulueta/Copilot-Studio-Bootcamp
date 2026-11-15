@@ -87,7 +87,7 @@ In this step, you will add nodes to the **Book a Real Estate Showing** topic and
 7. Select the **+** icon under the date and time question node and select **Send a message**
 8. In **Enter a message**, enter:
    ```
-   Thank you. I have collected your showing details, but no booking has been scheduled.
+   Great! Let me get that scheduled for you.
    ```
 9. Select **Save**
 
