@@ -15,7 +15,7 @@ In this hands-on lab, you will create a Microsoft List to store real estate prop
 ## Lab Architecture
 By the end of this lab, you will have:
 - A Microsoft List named **Real Estate Properties** containing sample property records
-- A Copilot Studio agent named **Real Estate Booking Service** saved in your Lab 01 solution
+- A Copilot Studio agent named **Real Estate Booking Service** saved in your solution
 - Agent details and instructions that guide booking-related conversations
 - A public website knowledge source for grounded generative AI responses
 
@@ -29,7 +29,7 @@ In this step, you will create a Microsoft List that stores real estate property 
 1. Open a new browser tab and sign in to [Microsoft Lists](https://www.microsoft.com/en-us/microsoft-365/microsoft-lists)
 
 ### 1.2 Create a Blank List
-1. Select **+ New list**
+1. Select **+ Create new**
 2. Select **Blank list**
 3. Configure the list:
    - **Name:** `Real Estate Properties` (use your first and last name to make it unique)
