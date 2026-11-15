@@ -80,7 +80,7 @@ In this step, you'll access Copilot Studio, select the appropriate environment, 
 
 ### 2.1 Open Copilot Studio
 1. In a new browser tab, navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and sign in if prompted
-2. Select the environment picker and make sure you are the proper environment.
+2. Select the environment picker and make sure you are in the proper environment.
 3. In the navigation pane on the left, select **Agents**
 4. Select **New agent** > **Agent (Standard)** to create a new agent
 
@@ -88,8 +88,7 @@ In this step, you'll access Copilot Studio, select the appropriate environment, 
 1. Name the agent `Real Estate Booking Service`
 2. Open the **Agent settings** dropdown
 3. Select the solution you created (`Copilot Agent <FirstName> <LastName>`)
-4. If a **Schema name** field is shown, enter `labagent`
-5. Click **Create** to create the agent
+4. Click **Create** to create the agent
 
 > **Note:** Your agent will begin provisioning. Once it is ready, you can continue configuring it. Because it is saved in your solution, the solution now contains both the **Expense Claims Agent** and the **Real Estate Booking Service** agent.
 
