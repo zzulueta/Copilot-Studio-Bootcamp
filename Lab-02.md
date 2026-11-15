@@ -1,7 +1,7 @@
 # Lab: Build a Real Estate Agent with Copilot Studio
 
 ## Overview
-In this hands-on lab, you will create a Microsoft List to store real estate property data, then use Microsoft Copilot Studio to manually create a Real Estate Booking agent inside the solution you created in Lab 01. You will configure the agent's details and instructions, ground it in a public website knowledge source, and test its generative AI responses.
+In this hands-on lab, you will create a Microsoft List to store real estate property data, then use Microsoft Copilot Studio to manually create a Real Estate Booking agent inside the solution you created. You will configure the agent's details and instructions, ground it in a public website knowledge source, and test its generative AI responses.
 
 **Estimated Time:** 45 minutes
 
@@ -76,22 +76,22 @@ In this step, you will create a Microsoft List that stores real estate property 
 
 ## Step 2: Create an Agent Manually
 
-In this step, you'll access Copilot Studio, select the appropriate environment, and create a new agent in the solution you created in Lab 01.
+In this step, you'll access Copilot Studio, select the appropriate environment, and create a new agent in the solution you created.
 
 ### 2.1 Open Copilot Studio
 1. In a new browser tab, navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and sign in if prompted
-2. Select the environment picker and make sure you are in the same environment you used in Lab 01
+2. Select the environment picker and make sure you are the proper environment.
 3. In the navigation pane on the left, select **Agents**
 4. Select **New agent** > **Agent (Standard)** to create a new agent
 
 ### 2.2 Create the Agent in Your Solution
 1. Name the agent `Real Estate Booking Service`
 2. Open the **Agent settings** dropdown
-3. Select the solution you created in Lab 01 (`Copilot Agent <FirstName> <LastName>`)
+3. Select the solution you created (`Copilot Agent <FirstName> <LastName>`)
 4. If a **Schema name** field is shown, enter `labagent`
 5. Click **Create** to create the agent
 
-> **Note:** Your agent will begin provisioning. Once it is ready, you can continue configuring it. Because it is saved in your Lab 01 solution, the solution now contains both the **Expense Claims Agent** and the **Real Estate Booking Service** agent.
+> **Note:** Your agent will begin provisioning. Once it is ready, you can continue configuring it. Because it is saved in your solution, the solution now contains both the **Expense Claims Agent** and the **Real Estate Booking Service** agent.
 
 ### 2.3 Configure the Agent Details
 1. In the **Details** section, select **Edit**
@@ -162,7 +162,7 @@ In this step, you'll add a knowledge source that the agent can use to generate r
 - [ ] **Real Estate Properties** Microsoft List created in a SharePoint site
 - [ ] List columns added (Property Name, Owner, Asking Price, Street, City, Bedrooms, Bathrooms)
 - [ ] Two sample property records added to the list
-- [ ] **Real Estate Booking Service** agent created in your Lab 01 solution
+- [ ] **Real Estate Booking Service** agent created in your solution
 - [ ] Agent description and instructions updated
 - [ ] Agent tested in the Test pane
 - [ ] Public website knowledge source added
