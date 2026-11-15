@@ -1,11 +1,11 @@
 # Lab: Manage Topics in Copilot Studio
 
 ## Overview
-In this hands-on lab, you will manage topics in the **Real Estate Booking Service** agent you created in Lab 02. You will disable an unused topic, switch to classic orchestration, create and refine a customer-details topic with Copilot, and create a topic for booking a real estate showing.
+In this hands-on lab, you will manage topics in the **Real Estate Booking Service** agent you created. You will disable an unused topic, switch to classic orchestration, create and refine a customer-details topic with Copilot, and create a topic for booking a real estate showing.
 
 **Prerequisites:**
-- Completion of **Lab 02: Build a Real Estate Agent with Copilot Studio**
-- The **Real Estate Booking Service** agent created in your Lab 01 solution
+- Completion of **Build a Real Estate Agent with Copilot Studio**
+- The **Real Estate Booking Service** agent created in your solution
 - Access to the same Copilot Studio environment used in the previous labs
 
 ---
