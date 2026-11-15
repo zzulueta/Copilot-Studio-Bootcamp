@@ -26,7 +26,7 @@ By the end of this lab, you will have:
 In this step, you will create a Microsoft List that stores real estate property data for the agent to work with.
 
 ### 1.1 Open Microsoft Lists
-1. Open a new browser tab and sign in to [Microsoft Lists](https://lists.microsoft.com/)
+1. Open a new browser tab and sign in to [Microsoft Lists](https://www.microsoft.com/en-us/microsoft-365/microsoft-lists)
 
 ### 1.2 Create a Blank List
 1. Select **+ New list**
