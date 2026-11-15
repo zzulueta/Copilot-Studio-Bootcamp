@@ -1,7 +1,7 @@
 # Lab: Manage Nodes in Copilot Studio
 
 ## Overview
-In this hands-on lab, you will extend the **Real Estate Booking Service** agent by making its customer-details topic reusable and building a showing-request conversation with nodes. You will test both confirmation paths, publish the agent, and try it on the demo website.
+In this hands-on lab, you will extend the **Real Estate Booking Service** agent by making its customer-details topic reusable and building a Book a Real Estate Showing conversation with nodes. You will test both confirmation paths, publish the agent, and try it on the demo website.
 
 **Prerequisites:**
 - A **Real Estate Booking Service** agent in your Copilot Studio environment, configured to use classic orchestration
@@ -14,7 +14,7 @@ In this hands-on lab, you will extend the **Real Estate Booking Service** agent 
 ## Lab Architecture
 By the end of this lab, you will have:
 - A reusable **Customer Details** topic that returns its collected values to the calling topic
-- A showing-request topic with message, redirect, condition, and question nodes
+- A Book a Real Estate Showing topic with message, redirect, condition, and question nodes
 - A flow that asks users to re-enter their details when they select **No**
 - A published agent tested through the demo website
 
@@ -44,7 +44,7 @@ In this step, you will make the customer-details variables available to a topic 
 
 ---
 
-## Step 2: Build the Showing-Request Flow
+## Step 2: Build the Book a Real Estate Showing Flow
 
 In this step, you will add nodes to the **Book a Real Estate Showing** topic and use the confirmation answer to control the conversation.
 
@@ -115,7 +115,7 @@ In this step, you will add nodes to the **Book a Real Estate Showing** topic and
 
 ## Step 3: Handle the No Condition
 
-The showing-request topic currently handles only the **Yes** path. In this step, you will redirect users back to the customer-details step when they select **No**.
+The Book a Real Estate Showing topic currently handles only the **Yes** path. In this step, you will redirect users back to the customer-details step when they select **No**.
 
 ### 3.1 Add the No-Path Redirect
 1. Return to the **Book a Real Estate Showing** topic
@@ -170,7 +170,7 @@ In this step, you will configure authentication for a demo, publish the complete
 
 ## Verification Checklist
 - [ ] Name, email, and confirmation variables configured as topic outputs
-- [ ] Showing-request topic calls **Customer Details** and uses the returned confirmation variable
+- [ ] Book a Real Estate Showing topic calls **Customer Details** and uses the returned confirmation variable
 - [ ] **Yes** branch collects a property and a date and time
 - [ ] **No** branch returns to the **Customer Details** redirect
 - [ ] Both paths tested in the Test pane
@@ -186,7 +186,7 @@ In this lab, you successfully:
 
 1. ✅ Configured variables to return values from a reusable topic
 2. ✅ Added message, redirect, condition, and question nodes
-3. ✅ Tested a showing-request flow across topics
+3. ✅ Tested a Book a Real Estate Showing flow across topics
 4. ✅ Added and tested a path for correcting customer details
 5. ✅ Published the agent and tested it on the demo website
 
