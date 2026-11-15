@@ -3,8 +3,6 @@
 ## Overview
 In this hands-on lab, you will set up a Power Platform solution, then use Microsoft Copilot Studio to create a simple agent that answers employee questions about expense policies in a fictional corporation (Contoso). You will create the agent using natural language, manage its topics, ground it in a knowledge source, and publish it to a demo website.
 
-**Estimated Time:** 60 minutes
-
 **Prerequisites:**
 - A Microsoft 365 account
 - A Copilot Studio license, or the ability to sign up for a Copilot Studio free trial

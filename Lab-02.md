@@ -3,8 +3,6 @@
 ## Overview
 In this hands-on lab, you will create a Microsoft List to store real estate property data, then use Microsoft Copilot Studio to manually create a Real Estate Booking agent inside the solution you created. You will configure the agent's details and instructions, ground it in a public website knowledge source, and test its generative AI responses.
 
-**Estimated Time:** 45 minutes
-
 **Prerequisites:**
 - Solution `Copilot Agent <FirstName> <LastName>` created.
 - A Microsoft 365 account with access to Microsoft Lists and a SharePoint site
