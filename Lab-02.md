@@ -33,7 +33,6 @@ In this step, you will create a Microsoft List that stores real estate property 
 2. Select **Blank list**
 3. Configure the list:
    - **Name:** `Real Estate Properties` (use your first and last name to make it unique)
-   - **Description:** `Real estate properties available for showings`
 4. Select **Create**
 
 ### 1.3 Add Columns
@@ -44,13 +43,13 @@ In this step, you will create a Microsoft List that stores real estate property 
    |---|---|
    | `Owner` | Person |
    | `Asking Price` | Currency |
-   | `Street` | Single line of text |
-   | `City` | Single line of text |
+   | `Street` | Text |
+   | `City` | Text |
    | `Bedrooms` | Number |
    | `Bathrooms` | Number |
 
 ### 1.4 Add Test Data
-1. Select **+ New** to add a new item
+1. Select **+ Add new item** to add a new item
 2. Enter the following data:
    - **Property Name:** `1100 High Villas`
    - **Owner:** Select your user (search for your provided username)
@@ -60,7 +59,7 @@ In this step, you will create a Microsoft List that stores real estate property 
    - **Bedrooms:** `3`
    - **Bathrooms:** `2`
 3. Select **Save**
-4. Select **+ New** and enter the following data:
+4. Select **+ Add new item** and enter the following data:
    - **Property Name:** `555 Oak Lane`
    - **Owner:** Select your user
    - **Asking Price:** `300,000`
