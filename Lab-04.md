@@ -113,39 +113,11 @@ In this step, you will add nodes to the **Book a Real Estate Showing** topic and
 
 ---
 
-## Step 3: Publish and Test the Agent
-
-In this step, you will configure authentication for a demo, publish the agent, and test it on the demo website.
-
-> **Important:** **No authentication** allows anyone with the demo link to interact with the agent. Use only a permitted training environment and fictitious sample data; do not enter real customer information. If your organization requires authentication, follow its policy instead of disabling it.
-
-### 3.1 Configure Authentication
-1. Select **Settings** in the upper-right corner of **Real Estate Booking Service**
-2. Select **Security**, then **Authentication**
-3. Select **No authentication**
-4. Select **Save**, then select **Save** again in the confirmation window
-5. Select **X** to close the Settings pane
-
-### 3.2 Publish the Agent
-1. Select **Publish** in the upper-right corner
-2. Select **Publish** again to publish the current changes
-
-### 3.3 Test the Demo Website
-1. Select the ellipsis **…** next to **Settings** and select **Go to demo website**
-2. In **Type your message**, enter:
-   ```
-   I want to book a property showing.
-   ```
-3. Answer the prompts using fictitious sample data and select **Yes** when asked to confirm the details
-4. Verify that the agent asks for the property and requested date and time, then displays the final message
-
----
-
-## Step 4: Handle the No Condition
+## Step 3: Handle the No Condition
 
 The showing-request topic currently handles only the **Yes** path. In this step, you will redirect users back to the customer-details step when they select **No**.
 
-### 4.1 Add the No-Path Redirect
+### 3.1 Add the No-Path Redirect
 1. Return to the **Book a Real Estate Showing** topic
 2. Select the **+** icon under **All other conditions**
 3. Select **Topic management** > **Go to step**
@@ -153,7 +125,7 @@ The showing-request topic currently handles only the **Yes** path. In this step,
 5. Verify that a redirect node appears under **All other conditions**
 6. Select **Save**
 
-### 4.2 Test the No Path
+### 3.2 Test the No Path
 1. Open the **Test** pane and start a new test session
 2. Enter:
    ```
@@ -164,9 +136,35 @@ The showing-request topic currently handles only the **Yes** path. In this step,
 5. Verify that the agent returns to **Customer Details** and asks for the name again
 6. Enter the corrected sample name and email address, select **Yes**, and complete the property and date prompts
 
-### 4.3 Republish the Agent
-1. Select **Publish**, then select **Publish** again to make the No-path changes available on the demo website
-2. On the demo website, start a new conversation and repeat the No-path test
+---
+
+## Step 4: Publish and Test the Agent
+
+In this step, you will configure authentication for a demo, publish the completed agent, and test it on the demo website.
+
+> **Important:** **No authentication** allows anyone with the demo link to interact with the agent. Use only a permitted training environment and fictitious sample data; do not enter real customer information. If your organization requires authentication, follow its policy instead of disabling it.
+
+### 4.1 Configure Authentication
+1. Select **Settings** in the upper-right corner of **Real Estate Booking Service**
+2. Select **Security**, then **Authentication**
+3. Select **No authentication**
+4. Select **Save**, then select **Save** again in the confirmation window
+5. Select **X** to close the Settings pane
+
+### 4.2 Publish the Agent
+1. Select **Publish** in the upper-right corner
+2. Select **Publish** again to publish the current changes
+
+### 4.3 Test the Demo Website
+1. Select the ellipsis **…** next to **Settings** and select **Go to demo website**
+2. In **Type your message**, enter:
+   ```
+   I want to book a property showing.
+   ```
+3. Enter a fictitious sample name and email address, then select **No** when asked to confirm the details
+4. Verify that the agent asks for the name again
+5. Enter corrected fictitious details and select **Yes**
+6. Verify that the agent asks for the property and requested date and time, then displays the final message
 
 ---
 
@@ -176,8 +174,8 @@ The showing-request topic currently handles only the **Yes** path. In this step,
 - [ ] **Yes** branch collects a property and a date and time
 - [ ] **No** branch returns to the **Customer Details** redirect
 - [ ] Both paths tested in the Test pane
-- [ ] Agent published and tested on the demo website
-- [ ] Final changes republished and the No path tested on the demo website
+- [ ] Agent published once after completing both paths
+- [ ] No and Yes paths tested on the demo website
 - [ ] Test confirms that no booking is scheduled by this flow
 
 ---
@@ -189,8 +187,8 @@ In this lab, you successfully:
 1. ✅ Configured variables to return values from a reusable topic
 2. ✅ Added message, redirect, condition, and question nodes
 3. ✅ Tested a showing-request flow across topics
-4. ✅ Published the agent and tested it on the demo website
-5. ✅ Added and tested a path for correcting customer details
+4. ✅ Added and tested a path for correcting customer details
+5. ✅ Published the agent and tested it on the demo website
 
 ### Key Learnings
 - **Topic outputs:** Return collected values to a calling topic without making them global variables
