@@ -6,7 +6,7 @@ In this hands-on lab, you will create a Microsoft List to store real estate prop
 **Estimated Time:** 45 minutes
 
 **Prerequisites:**
-- Completion of **Lab 01: Create Your First Agent with Copilot Studio** (including the solution `Copilot Agent <FirstName> <LastName>`)
+- Solution `Copilot Agent <FirstName> <LastName>` created.
 - A Microsoft 365 account with access to Microsoft Lists and a SharePoint site
 - A Copilot Studio license, or the ability to sign up for a Copilot Studio free trial
 
