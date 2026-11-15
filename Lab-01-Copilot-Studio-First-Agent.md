@@ -244,13 +244,7 @@ Check whether the file you uploaded has finished indexing. If not, take a coffee
 2. Select the **Knowledge** tab
 3. Check the **Status** of your uploaded file. If it is still **In progress**, refresh every few minutes until it is **Ready**.
 
-### 6.2 Review Conversational Boosting
-1. When the file is **Ready**, go to the **Topics** page and open the **Conversational boosting** system topic
-2. Recall that this topic is triggered by an unknown intent and then tries to generate a response based on knowledge sources, such as the file you uploaded
-
-> **Note:** If no relevant answer is found in your custom knowledge sources, the topic may use the language model's built-in knowledge to provide a more generic answer. You can configure the topic to restrict its search to specific knowledge sources for greater control over generative AI responses.
-
-### 6.3 Test Grounded Responses
+### 6.2 Test Grounded Responses
 1. Expand the **Test** pane and restart the conversation
 2. Enter the following prompt:
    ```
@@ -265,19 +259,9 @@ Check whether the file you uploaded has finished indexing. If not, take a coffee
    What guidelines are there for entertainment expenses?
    ```
 
-### 6.4 Republish the Agent
+### 6.3 Republish the Agent
 1. At the top of the page, select **Publish**
 2. On the **Publish** page, select **Publish**
-
----
-
-## Step 7: Challenge
-
-Now that you've seen how to use Copilot Studio to create a simple agent, apply what you've learned on your own. Create an agent that answers questions about Microsoft Copilot:
-- Create a new agent that lets users learn about Microsoft Copilot
-- Name the agent **Copilot Study Buddy**
-- Use the [Microsoft Copilot website](https://www.microsoft.com/en-us/microsoft-copilot/) as a knowledge source
-- Publish the agent so users can test it on a demo website
 
 ---
 
@@ -285,14 +269,13 @@ Now that you've seen how to use Copilot Studio to create a simple agent, apply w
 - [ ] Power Platform developer environment available
 - [ ] Solution and publisher created
 - [ ] Expense claims agent created using natural language and saved to your solution
-- [ ] Agent instructions updated (friendly, professional tone; no tax advice)
+- [ ] Agent instructions updated
 - [ ] Agent tested in the Test pane
 - [ ] **Ask about expenses contact** topic created and tested
 - [ ] Expenses policy document uploaded as a knowledge source with status **Ready**
 - [ ] Authentication set to **No authentication**
 - [ ] Agent published and Demo website channel configured
 - [ ] Grounded responses with citations verified
-- [ ] (Challenge) **Copilot Study Buddy** agent created and published
 
 ---
 
