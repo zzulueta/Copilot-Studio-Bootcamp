@@ -76,7 +76,7 @@ In this step, you will add questions that use the custom entities to capture pro
 
 ### 2.1 Add a Property Type Question
 1. Select the **Topics** tab and open **Book a Real Estate Showing**
-2. In the **Yes** condition branch, select the **+** icon between the condition and the existing property question, then select **Ask a question**
+2. In the **Yes** condition branch, select the **+** icon between the Condition and the existing Property Question, then select **Ask a question**
 3. Configure the question:
    - **Enter a message:** `What type of property do you want to see?`
    - **Identify:** **Property Type**
@@ -84,16 +84,16 @@ In this step, you will add questions that use the custom entities to capture pro
    - **Save user response as:** Select the variable and set its name to `PropertyType`
 
 ### 2.2 Add a Number of Bedrooms Question
-1. Select the **+** icon below the new property type question and select **Ask a question**
+1. Select the **+** icon below the new Property Type question and select **Ask a question**
 2. Configure the question:
    - **Enter a message:** `How many bedrooms do you need?`
    - **Identify:** **Number of Bedrooms**
    - **Save user response as:** Select the variable and set its name to `NumberofBedrooms`
 3. Select **Save**
-4. On the **NumberofBedrooms** question node, select the ellipsis **…** to open its properties
+4. On the **NumberofBedrooms** question node, select the ellipsis **…** to open its **Properties**
 5. Select **Question behavior**
 6. Under **Retry prompt**, enable **Customize**
-7. Enter the retry prompt:
+7. Enter the Retry prompt:
    ```
    Enter a value from 1 to 5.
    ```
