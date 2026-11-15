@@ -183,7 +183,6 @@ In this lab, you successfully:
 ### Key Learnings
 - **Environment alignment:** Working in the correct environment is essential to ensure all configurations, data, and agents are aligned and functional
 - **Microsoft Lists:** Provide a quick, low-code way to store and manage structured business data, such as property records, without building a custom app
-- **SharePoint storage:** Saving a list to a SharePoint site makes it shareable and available as a data source for Copilot Studio agents
 - **Solutions:** Creating agents inside a solution keeps related components together and makes them easier to manage and move between environments
 - **Descriptions and instructions:** Clear agent descriptions and instructions guide how the agent responds, asks questions, and handles incomplete inputs
 - **Instructions vs. enforcement:** Instructions influence behavior but do not strictly control it, highlighting the need for additional design elements for consistency
