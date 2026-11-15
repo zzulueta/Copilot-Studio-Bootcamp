@@ -1,7 +1,7 @@
 # Lab: Manage Nodes in Copilot Studio
 
 ## Overview
-In this hands-on lab, you will extend the **Real Estate Booking Service** agent by making its customer-details topic reusable and building a Book a Real Estate Showing conversation with nodes. You will test both confirmation paths, publish the agent, and try it on the demo website.
+In this hands-on lab, you will extend the **Real Estate Booking Service** agent by making its Customer Details topic reusable and building a Book a Real Estate Showing conversation with nodes. You will test both confirmation paths, publish the agent, and try it on the demo website.
 
 **Prerequisites:**
 - A **Real Estate Booking Service** agent in your Copilot Studio environment, configured to use classic orchestration
@@ -24,7 +24,7 @@ By the end of this lab, you will have:
 
 ## Step 1: Configure Topic Variable Outputs
 
-In this step, you will make the customer-details variables available to a topic that calls **Customer Details**.
+In this step, you will make the Customer Details topic variables available to any topic that calls it.
 
 ### 1.1 Open the Customer Details Topic
 1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and make sure you are in the appropriate environment
@@ -115,7 +115,7 @@ In this step, you will add nodes to the **Book a Real Estate Showing** topic and
 
 ## Step 3: Handle the No Condition
 
-The Book a Real Estate Showing topic currently handles only the **Yes** path. In this step, you will redirect users back to the customer-details step when they select **No**.
+The Book a Real Estate Showing topic currently handles only the **Yes** path. In this step, you will redirect users back to the Customer Details step when they select **No**.
 
 ### 3.1 Add the No-Path Redirect
 1. Return to the **Book a Real Estate Showing** topic
