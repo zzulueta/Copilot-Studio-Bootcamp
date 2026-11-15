@@ -67,7 +67,7 @@ In this step, you will add nodes to the **Book a Real Estate Showing** topic and
 
 ### 2.3 Add a Condition Node
 1. Select the **+** icon under the redirect node and select **Add a condition**
-2. Select the returned **DetailsCorrect** variable
+2. In **Select a variable**, select the returned **DetailsCorrect** variable
 3. Select **is equal to**, then select **Yes**
 4. Select **Save**
 
