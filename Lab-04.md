@@ -36,7 +36,7 @@ In this step, you will make the customer-details variables available to a topic 
 ### 1.2 Return Variables to the Calling Topic
 1. Select **Variables** in the top bar to open the Variables pane
 2. Under **Browse**, select **Topic**
-3. For each of the three variables containing the name, email address, and confirmation answer, select the checkbox for returning its value to other topics
+3. For each of the three variables containing the name, email address, and confirmation answer, select the checkbox for Return values to original topics.
 4. Verify the confirmation variable is named `DetailsCorrect`. If Copilot generated a different name, select the variable and rename it.
 5. Select **Save**
 
