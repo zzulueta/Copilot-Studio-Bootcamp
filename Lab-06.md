@@ -157,7 +157,7 @@ In this step, you will create an agent flow that saves the selected property and
 ## Step 5: Add the Create Booking Request Tool to the Topic
 
 1. Select the **Topics** tab and open **Book a Real Estate Showing**.
-2. Below the message that displays the property name, select **+** > **Add a tool**, then select **Create Booking Request**.
+2. Below the question that asks for the requested showing date and time, select **+** > **Add a tool**, then select **Create Booking Request**.
 3. Map the inputs to the topic variables:
    - **PropertyName:** `propertyname` output from **Get Property**
    - **ViewerName:** `Name`
