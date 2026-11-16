@@ -65,9 +65,9 @@ In this step, you will enable generative AI orchestration and configure answers 
    - **Web Search**
    - **Allow the AI to use its own general knowledge**
    - **Content moderation level**
-5. Select **Search only selected sources**.
-6. Select **Add knowledge** and choose the website, **Real Estate Properties**, and **Real Estate Booking Requests** knowledge sources.
-7. Disable **Allow the AI to use its own general knowledge**.
+5. Under Knowledge sources, select **Search only selected sources**.
+6. Choose the website, **Real Estate Properties**, and **Real Estate Booking Requests** knowledge sources.
+7. Disable **Web search** and **Allow the AI to use its own general knowledge**.
 8. Select **Save**.
 
 ---
