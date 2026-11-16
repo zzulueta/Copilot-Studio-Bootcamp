@@ -111,13 +111,12 @@ In this step, you will check that the agent can answer from the approved sources
    What is the asking price, street, and city of 555 Oak Lane?
    ```
 4. Verify that the response is grounded in the **Real Estate Properties** list.
-5. To check a property question through generative answers rather than the flow, temporarily turn off the **Get Property** tool in the **Tools** tab.
-6. Ask:
+5. Ask:
    ```text
-   What properties have 3 bedrooms?
+   Do we have any real estate bookings?
    ```
-7. Verify that the agent answers from the **Real Estate Properties** list.
-8. Turn the **Get Property** tool back on in the **Tools** tab.
+6. Verify that the agent answers from the **Real Estate Booking Requests** list.
+
 
 ### 4.2 Test the Showing and Booking Request
 1. In the test pane, start a new test session.
