@@ -139,7 +139,7 @@ In this step, you will create an agent flow that saves the selected property and
 4. Configure **Create item**:
    - **Site Address:** Select Enter custom value and enter the site containing **Real Estate Booking Requests**.
    - **List Name:** Select **Real Estate Booking Requests**.
-   - **Booking Name:** Enter `Copilot booking`.
+   - **Title:** Enter `Copilot booking`.
    - **Property Name:** Insert the **PropertyName** trigger input.
    - **Viewer Name:** Insert the **ViewerName** trigger input.
    - **Viewer Email:** Insert the **ViewerEmail** trigger input.
