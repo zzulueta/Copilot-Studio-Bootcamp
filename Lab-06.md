@@ -163,10 +163,12 @@ In this step, you will create an agent flow that saves the selected property and
    - **ViewerName:** `Name`
    - **ViewerEmail:** `EmailAddress`
    - **RequestedDateTime:** `DateTime`
-4. Select the **Create Booking Request** action. Use Copilot to generate a confirmation message that thanks the user and confirms the showing request was saved.
-5. Review and update the generated message as needed.
-6. Add **Topic management** > **End all topics** after the confirmation message.
-7. Select **Save**, then select **Publish** and confirm publishing the agent.
+4. Select the **Message** action after the **Create Booking Request** action. Modify the message to:
+   ```
+   Your Real Estate Booking has been scheduled. Thank you!
+   ```
+5. Add **Topic management** > **End all topics** after the confirmation message.
+6. Select **Save**, then select **Publish** and confirm publishing the agent.
 
 ---
 
