@@ -81,7 +81,7 @@ In this step, you will add nodes to the **Book a Real Estate Showing** topic and
 4. Select the **+** icon under the new question node and select **Ask a question**
 5. Configure the question:
    - **Enter a message:** `What date and time do you want to see the property?`
-   - **Identify:** **Date and time**
+   - **Identify:** **User's entire response**
    - **Save user response as:** Select the variable and set its name to `DateTime`
 6. Select **Save**
 7. Select the **+** icon under the date and time question node and select **Send a message**
