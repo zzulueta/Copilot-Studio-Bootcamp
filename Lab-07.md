@@ -34,8 +34,6 @@ In this step, you will configure the agent to authenticate users with their Micr
 4. Select the **Security** tab, then select **Authentication**.
 5. Select **Authenticate with Microsoft**.
 6. Select **Save**, then select **Save** again in the confirmation window.
-7. Select the **X** in the upper-right corner to close Settings.
-8. Select **Publish** to publish the agent.
 
 ---
 
@@ -44,9 +42,8 @@ In this step, you will configure the agent to authenticate users with their Micr
 In this step, you will enable generative AI orchestration and configure answers to use the website and Microsoft Lists rather than general model knowledge.
 
 ### 2.1 Enable Generative AI Orchestration
-1. Select **Settings** in the upper-right corner.
-2. In the **Generative AI** section, turn **Orchestration** on.
-3. Select **Save**, then close Settings.
+1. In the **Generative AI** section, turn **Orchestration** on.
+2. Select **Save**, then close Settings.
 
 ### 2.2 Add the Microsoft Lists as Knowledge Sources
 1. Select the **Knowledge** tab, then select **+ Add knowledge**.
