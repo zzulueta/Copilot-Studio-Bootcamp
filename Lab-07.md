@@ -148,7 +148,7 @@ In this step, you will check that the agent can answer from the approved sources
 - [ ] The website and both Microsoft Lists are selected for conversational boosting
 - [ ] General model knowledge is disabled for grounded generative answers
 - [ ] The fallback topic uses the approved sources and includes a controlled response
-- [ ] The agent answers property questions using the **Real Estate Properties** list
+- [ ] The agent answers property questions using the **Real Estate Properties** and **Real Estate Booking Requests** list
 - [ ] The showing conversation completes and the booking request appears in the requests list
 
 ---
