@@ -58,7 +58,7 @@ In this step, you will create an agent flow that searches the **Real Estate Prop
 ### 2.1 Create the Flow and Add an Input
 1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and make sure you are in the appropriate environment.
 2. Select **Agents** in the left navigation pane, then open the **Real Estate Booking Service** agent.
-3. Select the **Tools** tab > **+ Add a tool** > **+ New tool** > **Agent flow**.
+3. Select the **Tools** tab > **+ Add a tool** > **Agent flow**.
 4. In the flow designer, select the **When an agent calls the flow** trigger, then select **+ Add an input**.
 5. Select **Text**.
 6. Enter `Bedrooms` for **Input** and `Number of Bedrooms` for **Please enter your input**.
@@ -72,7 +72,7 @@ In this step, you will create an agent flow that searches the **Real Estate Prop
 2. Search for **SharePoint**, then select the SharePoint connector's **Get items** action.
 3. If prompted, sign in with the account that can access the SharePoint site containing the lists.
 4. Configure **Get items**:
-   - **Site Address:** Select the site containing **Real Estate Properties**.
+   - **Site Address:** Select Enter custom value and enter the site containing **Real Estate Properties**.
    - **List Name:** Select **Real Estate Properties** (or the unique list name you created).
    - **Filter Query:** Enter `Bedrooms eq `, including the space after `eq`, then insert the **Bedrooms** trigger input using dynamic content.
    - **Top Count:** Enter `1`.
@@ -89,7 +89,7 @@ In this step, you will create an agent flow that searches the **Real Estate Prop
    first(body('Get_items')?['value'])?['Title']
    ```
 6. Select **Add**.
-7. Open the **Settings** tab for **Respond to Copilot**. Ensure **Asynchronous Response** is **Off**, then select **Done**.
+7. Open the **Settings** tab for **Respond to Copilot**. Ensure **Asynchronous Response** is **Off**.
 8. Select **Save draft**, wait for the save to complete, then select **Publish**.
 9. Return to the **Real Estate Booking Service** agent and open the **Tools** tab.
 10. If **Get Property** is not listed, select **+ Add a tool** > **Flow**, select **Get Property**, then select **Add and configure**.
@@ -118,7 +118,7 @@ In this step, you will replace the manual property question with the **Get Prope
 In this step, you will create an agent flow that saves the selected property and customer details to the **Real Estate Booking Requests** list.
 
 ### 4.1 Create the Flow and Add Inputs
-1. In the agent, select the **Tools** tab > **+ Add a tool** > **+ New tool** > **Agent flow**.
+1. In the agent, select the **Tools** tab > **+ Add a tool** > **Agent flow**.
 2. Select **Save draft** and wait for the flow to save.
 3. Select the **Overview** tab. In the **Details** section, select **Edit**.
 4. Rename the flow `Create Booking Request`, then select **Save**.
@@ -137,7 +137,7 @@ In this step, you will create an agent flow that saves the selected property and
 2. Search for **SharePoint**, then select the SharePoint connector's **Create item** action.
 3. If prompted, sign in with the account that can access the SharePoint site.
 4. Configure **Create item**:
-   - **Site Address:** Select the site containing **Real Estate Booking Requests**.
+   - **Site Address:** Select Enter custom value and enter the site containing **Real Estate Booking Requests**.
    - **List Name:** Select **Real Estate Booking Requests**.
    - **Booking Name:** Enter `Copilot booking`.
    - **Property Name:** Insert the **PropertyName** trigger input.
