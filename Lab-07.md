@@ -85,8 +85,7 @@ In this step, you will use the same approved sources in the system fallback topi
 6. Select **Search only selected sources**.
 7. Select the website, **Real Estate Properties**, and **Real Estate Booking Requests** knowledge sources.
 8. Disable **Web search** and disable **Allow the AI to use its own general knowledge**.
-9. Under **Content moderation level**, select **Customize** and choose **Medium**.
-10. Select **Save**.
+9. Select **Save**.
 
 ### 3.2 Add a Controlled Fallback Response
 1. In the **Fallback** topic, add a **Send a message** node after the **Create generative answers** node.
