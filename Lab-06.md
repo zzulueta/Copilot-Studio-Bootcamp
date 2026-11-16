@@ -6,7 +6,7 @@ In this hands-on lab, you will create agent flows that connect the **Real Estate
 **Prerequisites:**
 - A **Real Estate Booking Service** agent in your Copilot Studio environment
 - A **Book a Real Estate Showing** topic that collects customer details, property preferences, and a requested showing date and time
-- Access to the SharePoint site and **Real Estate Properties** Microsoft List containing the sample properties
+- **Real Estate Properties** Microsoft List containing the sample properties
 
 ---
 
@@ -42,7 +42,6 @@ In this step, you will create a Microsoft List to store the requests submitted b
 
 | Column name | Column type |
 |---|---|
-| `Property ID` | Number |
 | `Property Name` | Text |
 | `Viewer Name` | Text |
 | `Viewer Email` | Text |
@@ -82,28 +81,20 @@ In this step, you will create an agent flow that searches the **Real Estate Prop
 
 ### 2.3 Return the Property to the Agent
 1. Select **Respond to Copilot** and select **+ Add an output**.
-2. Select **Number**.
-3. Enter `propertyid` for **Enter a name**.
+2. Select **Text**.
+3. Enter `propertyname` for **Enter a name**.
 4. Select the value field and select **fx** (Insert Expression).
 5. Enter:
    ```text
-   first(body('Get_items')?['value'])?['ID']
+   first(body('Get_items')?['value'])?['Title']
    ```
 6. Select **Add**.
-7. Select **+ Add an output**, then select **Text**.
-8. Enter `propertyname` for **Enter a name**.
-9. Select the value field and select **fx** (Insert Expression).
-10. Enter:
-    ```text
-    first(body('Get_items')?['value'])?['Title']
-    ```
-11. Select **Add**.
-12. Open the **Settings** tab for **Respond to Copilot**. Ensure **Asynchronous Response** is **Off**, then select **Done**.
-13. Select **Save draft**, wait for the save to complete, then select **Publish**.
-14. Return to the **Real Estate Booking Service** agent and open the **Tools** tab.
-15. If **Get Property** is not listed, select **+ Add a tool** > **Flow**, select **Get Property**, then select **Add and configure**.
-16. Open **Get Property**, set its description to `Get properties with the right number of bedrooms.`, then select **Save**.
-17. Confirm that **Get Property** appears in the agent's tools.
+7. Open the **Settings** tab for **Respond to Copilot**. Ensure **Asynchronous Response** is **Off**, then select **Done**.
+8. Select **Save draft**, wait for the save to complete, then select **Publish**.
+9. Return to the **Real Estate Booking Service** agent and open the **Tools** tab.
+10. If **Get Property** is not listed, select **+ Add a tool** > **Flow**, select **Get Property**, then select **Add and configure**.
+11. Open **Get Property**, set its description to `Get properties with the right number of bedrooms.`, then select **Save**.
+12. Confirm that **Get Property** appears in the agent's tools.
 
 ---
 
@@ -136,7 +127,6 @@ In this step, you will create an agent flow that saves the selected property and
 
    | Type | Input | Please enter your input |
    |---|---|---|
-   | Number | `PropertyId` | `Property ID` |
    | Text | `PropertyName` | `Property Name` |
    | Text | `ViewerName` | `Viewer Name` |
    | Text | `ViewerEmail` | `Viewer Email` |
@@ -150,7 +140,6 @@ In this step, you will create an agent flow that saves the selected property and
    - **Site Address:** Select the site containing **Real Estate Booking Requests**.
    - **List Name:** Select **Real Estate Booking Requests**.
    - **Booking Name:** Enter `Copilot booking`.
-   - **Property ID:** Insert the **PropertyId** trigger input.
    - **Property Name:** Insert the **PropertyName** trigger input.
    - **Viewer Name:** Insert the **ViewerName** trigger input.
    - **Viewer Email:** Insert the **ViewerEmail** trigger input.
@@ -170,7 +159,6 @@ In this step, you will create an agent flow that saves the selected property and
 1. Select the **Topics** tab and open **Book a Real Estate Showing**.
 2. Below the message that displays the property name, select **+** > **Add a tool**, then select **Create Booking Request**.
 3. Map the inputs to the topic variables:
-   - **PropertyId:** `propertyid` output from **Get Property**
    - **PropertyName:** `propertyname` output from **Get Property**
    - **ViewerName:** `Name`
    - **ViewerEmail:** `EmailAddress`
@@ -207,7 +195,7 @@ In this step, you will create an agent flow that saves the selected property and
 ## Verification Checklist
 - [ ] **Real Estate Booking Requests** list created with the required columns
 - [ ] **Get Property** flow filters the **Real Estate Properties** list by bedroom count
-- [ ] **Get Property** returns a property ID and property name
+- [ ] **Get Property** returns only the property name
 - [ ] The showing topic calls **Get Property** and displays the returned property name
 - [ ] **Create Booking Request** flow creates an item in the booking requests list
 - [ ] The showing topic passes the selected property and customer details to **Create Booking Request**
