@@ -42,23 +42,19 @@ In this step, you will configure the agent to authenticate users with their Micr
 In this step, you will enable generative AI orchestration and configure answers to use the website and Microsoft Lists rather than general model knowledge.
 
 ### 2.1 Enable Generative AI Orchestration
-1. In the **Generative AI** section, turn **Orchestration** on.
+1. In the **Generative AI** section, turn **Orchestration** to **Yes**.
 2. Select **Save**, then close Settings.
 
 ### 2.2 Add the Microsoft Lists as Knowledge Sources
 1. Select the **Knowledge** tab, then select **+ Add knowledge**.
 2. In the **Upload file** section, select **SharePoint**.
-3. Select **Browse items**.
+3. Select **Browse items** and search for **My lists**.
 4. Select the **Real Estate Properties** list and the **Real Estate Booking Requests** list.
-   - If a list is not shown, open it in SharePoint, then return to the knowledge source picker and check **Recent Lists**.
-   - You can also enter the list URL to select a list directly.
 5. Select **Confirm selection**.
-6. If prompted, enter a descriptive name and description for each list:
+6. Enter a description for each list:
    - **Real Estate Properties:** `Use this list to answer questions about available properties, including property names, locations, asking prices, and bedroom counts.`
    - **Real Estate Booking Requests:** `Use this list to answer questions about saved showing requests.`
 7. Select **Add to agent**.
-
-> **Note:** Users need read access to a list to receive answers grounded in its contents. The booking-request list may contain customer details, so only grant access to users who are authorized to see those requests.
 
 ### 2.3 Configure Conversational Boosting
 1. Select the **Topics** tab and select the **System** filter.
