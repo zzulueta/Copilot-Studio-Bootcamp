@@ -80,7 +80,7 @@ In this step, you will create an agent flow that adds the extracted property inf
 3. In the flow designer, select the **When an agent calls the flow** trigger and add these inputs:
 
    | Type | Input | Please enter your input |
-   |---|---|
+   |---|---| --- |
    | Text | `PropertyName` | The name of the property |
    | Text | `Street` | The street address of the property |
    | Text | `City` | The city where the property is located | 
