@@ -61,7 +61,7 @@ In this step, you will create a prompt that reads the uploaded file and returns 
 
    Use only information present in the file. Do not guess or invent missing values.
    ```
-4. Select **Add content** > **Image or document**, upload `Listing 1.pdf`, then close the content pane.
+4. Select **Add content** > **Image or document**, upload `Listing 1.pdf` found from the Lab-08 folder, then close the content pane.
 5. Select **Test** and verify that the response contains the property fields in JSON format.
 6. Select **Save**.
 7. In the prompt node, select the ellipsis **…** and add the `fileUpload` variable as the prompt input.
