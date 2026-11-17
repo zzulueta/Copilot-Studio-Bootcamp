@@ -91,7 +91,7 @@ In this step, you will create an agent flow that adds the extracted property inf
 4. Select **Save draft**.
 
 ### 3.2 Add the Property to the Microsoft List
-1. Select the **+** icon between the trigger and **Respond to Copilot**.
+1. Select the **+** icon after the trigger.
 2. Search for **SharePoint** and select the SharePoint connector's **Create item** action.
 3. If prompted, sign in with an account that can add items to the **Real Estate Properties** list.
 4. Configure **Create item**:
@@ -109,8 +109,6 @@ In this step, you will create an agent flow that adds the extracted property inf
    - **Name:** `Create Property Listing`
    - **Description:** `Create a property listing in the Real Estate Properties Microsoft List.`
 7. Select **Save**, return to the **Designer** tab, then select **Publish**.
-8. Return to the agent's **Tools** tab. If **Create Property Listing** is not listed, select **+ Add a tool** > **Flow**, select the flow, then select **Add and configure**.
-9. Confirm that **Create Property Listing** appears in the agent's tools.
 
 ---
 
