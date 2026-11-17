@@ -47,8 +47,8 @@ In this step, you will create a prompt that reads the uploaded file and returns 
 1. Under the file question, select **+** > **Add a tool** > **New prompt**.
 2. Configure the prompt:
    - **Name:** `Get Property Details from File`
-   - **Model:** `GPT-5 chat`
-   - **Model response:** `JSON`
+   - **Model:** `GPT Latest`
+   - **Output:** `JSON`
 3. In **Instructions**, enter:
    ```text
    Extract the property information from the supplied file. Return a JSON object with these fields:
