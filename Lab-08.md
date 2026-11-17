@@ -95,9 +95,9 @@ In this step, you will create an agent flow that adds the extracted property inf
 2. Search for **SharePoint** and select the SharePoint connector's **Create item** action.
 3. If prompted, sign in with an account that can add items to the **Real Estate Properties** list.
 4. Configure **Create item**:
-   - **Site Address:** Select the SharePoint site that contains **Real Estate Properties**. If it is not listed, select **Enter custom value** and enter the site URL.
+   - **Site Address:** select **Enter custom value** and enter the site URL that contains **Real Estate Properties**. 
    - **List Name:** Select **Real Estate Properties**.
-   - **Property Name** (the renamed **Title** column): Insert the **PropertyName** trigger input.
+   - **Title**: Insert the **PropertyName** trigger input.
    - **Street:** Insert the **Street** trigger input.
    - **City:** Insert the **City** trigger input.
    - **Asking Price:** Insert the **AskingPrice** trigger input.
