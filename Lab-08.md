@@ -79,14 +79,14 @@ In this step, you will create an agent flow that adds the extracted property inf
 2. Select **+ Add a tool** > **Agent flow**.
 3. In the flow designer, select the **When an agent calls the flow** trigger and add these inputs:
 
-   | Type | Input |
+   | Type | Input | Please enter your input |
    |---|---|
-   | Text | `PropertyName` |
-   | Text | `Street` |
-   | Text | `City` |
-   | Number | `AskingPrice` |
-   | Number | `Bathrooms` |
-   | Number | `Bedrooms` |
+   | Text | `PropertyName` | The name of the property |
+   | Text | `Street` | The street address of the property |
+   | Text | `City` | The city where the property is located | 
+   | Number | `AskingPrice` | The asking price of the property |
+   | Number | `Bathrooms` | The number of bathrooms in the property |
+   | Number | `Bedrooms` | The number of bedrooms in the property |
 
 4. Select **Save draft**.
 
