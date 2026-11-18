@@ -59,7 +59,7 @@ In this step, you will configure the agent to send a sample message to your own 
 1. Return to the agent in Copilot Studio and select the **Tools** tab.
 2. Select **+ Add a tool**, then select the **Model Context Protocol** tab.
 3. Search for `Mail` and select the **Mail** MCP server
-4. Verify that the connection uses the mailbox you will test. If there is no connection needed, select **Create new connection** and follow the sign-in and consent prompts then **Add and configure**.
+4. Verify that the connection uses the mailbox you will test. If there is no connection needed, select **Create new connection** and follow the sign-in and consent prompts.
 5. Select **Add and configure**
 6. Review the available tools and turn off **Allow all**
 7. Enable only the tools for sending, searching, and retrieving messages:
