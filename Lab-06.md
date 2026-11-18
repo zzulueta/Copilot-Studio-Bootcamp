@@ -91,10 +91,6 @@ In this step, you will create an agent flow that searches the **Real Estate Prop
 6. Select **Add**.
 7. Open the **Settings** tab for **Respond to Copilot**. Ensure **Asynchronous Response** is **Off**.
 8. Select **Save draft**, wait for the save to complete, then select **Publish**.
-9. Return to the **Real Estate Booking Service** agent and open the **Tools** tab.
-10. If **Get Property** is not listed, select **+ Add a tool** > **Flow**, select **Get Property**, then select **Add and configure**.
-11. Open **Get Property**, set its description to `Get properties with the right number of bedrooms.`, then select **Save**.
-12. Confirm that **Get Property** appears in the agent's tools.
 
 ---
 
