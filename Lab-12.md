@@ -97,7 +97,7 @@ In this step, you will create a child agent inside the booking agent that answer
 
 ### 4.1 Create the Child Agent
 1. On the **Real Estate Booking Service** agent, select the **Agents** tab
-2. Select **+ Add and agent**
+2. Select **+ Add an agent**
 3. In the **Choose how you want to extend your agent** dialog, under **Create a child agent**, select **New child agent**
 4. Set the **Name** to `Customer Support FAQ`
 5. Under **When will this be used?**, keep **The agent chooses - Based on description**, then enter the description:
