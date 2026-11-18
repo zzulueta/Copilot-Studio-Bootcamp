@@ -147,24 +147,16 @@ In this step, you will update the agent instructions, create a property listing,
 
 > **Note:** Instructions guide the agent but do not guarantee that it will call a tool. This lab explicitly asks for the Teams post after the listing is created.
 
-### 4.2 Create a Property Listing
+### 4.2 Create a Property Listing and Post an Update
 1. Open the **Test your agent** pane and start a new test session
 2. Enter:
    ```text
    I want to create a property listing.
    ```
-3. When prompted, upload your sample property listing file
-4. Complete any connection prompts and wait for the agent to confirm that the listing was created
+3. If prompted to authorize the connection, select **Allow**.
+4. When prompted, upload your sample property listing file and wait for the agent to confirm that the listing was created
 5. Open **Real Estate Properties** in Microsoft Lists and verify the new item and its details
-
-### 4.3 Post and Verify the Update
-1. In the same test conversation, enter:
-   ```text
-   Post the confirmed details of the property I just created to the new-properties channel in copilot-studio-team.
-   ```
-2. If prompted, authorize the Teams MCP connection and confirm the post
-3. Verify the agent reports a successful post. If it asks for missing details, provide the confirmed values from the new list item.
-4. Open the `new-properties` channel in Teams and verify that the message contains the expected property details
+6. Open the `new-properties` channel in Teams and verify that the message contains the expected property details
 
 > **Note:** If the agent cannot find or post to the channel, check the selected tools, connection permissions, team membership, and channel name. A confirmation in the conversation alone does not verify that the message was posted.
 
