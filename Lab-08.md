@@ -47,7 +47,7 @@ In this step, you will create a prompt that reads the uploaded file and returns 
 1. Under the file question, select **+** > **Add a tool** > **New prompt**.
 2. Configure the prompt:
    - **Name:** `Get Property Details from File`
-   - **Model:** `GPT Latest`or select another approved model available in your environment
+   - **Model:** `GPT Latest` or select another approved model available in your environment
    - **Output:** `JSON`
 3. In **Instructions**, enter:
    ```text
