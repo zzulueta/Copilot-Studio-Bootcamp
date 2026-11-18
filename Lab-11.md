@@ -73,15 +73,11 @@ The Outlook trigger monitors incoming mail. Mail MCP will be used later to send 
    ```
 3. Select **Save**
 
-> **Note:** These instructions guide generative orchestration but are not an enforced security boundary. Subject filters alone do not authenticate a request. For production, use appropriate validation, authorization, approval, and monitoring.
-
 ---
 
 ## Step 3: Test the Trigger
 
 In this step, you will send matching and nonmatching emails, test the matching event once, and verify both actions.
-
-> **Important:** A new trigger does not run automatically until the agent is published with it. Testing the trigger runs the flow and Mail MCP tool; it is not a dry run. Replaying an event can create duplicate list items and emails. If the trigger is already published, it may also run automatically for matching mail.
 
 ### 3.1 Send Test Emails
 1. Open **Real Estate Properties** in Microsoft Lists and note an existing property name, such as `1100 High Villas`
