@@ -1,13 +1,13 @@
 # Lab: Use MCP Servers in Copilot Studio
 
 ## Overview
-In this hands-on lab, you will extend the **Real Estate Booking Service** agent with Model Context Protocol (MCP) servers. You will configure the **Mail MCP** server to search and read sample email, then add the **Teams MCP** server to post a property update to a Teams channel.
+In this hands-on lab, you will extend the **Real Estate Booking Service** agent with Model Context Protocol (MCP) servers. You will configure the **Mail MCP** server to send, search for, and read sample email, then add the **Teams MCP** server to post a property update to a Teams channel.
 
 **Prerequisites:**
 - A **Real Estate Booking Service** agent in a Copilot Studio environment
 - A **Create Property Listing** topic and agent flow that create an item in the **Real Estate Properties** Microsoft List from an uploaded property file
 - A sample property listing file and permission to add items to the **Real Estate Properties** list
-- A Microsoft 365 account with an accessible mailbox and permission to create or use a Teams team and channel
+- A Microsoft 365 account with an accessible mailbox that can send and receive email, and permission to create or use a Teams team and channel
 - Access to the **Mail** and **Teams** MCP servers and permission to create their connections
 - Permission to configure agent authentication
 
@@ -17,8 +17,8 @@ In this hands-on lab, you will extend the **Real Estate Booking Service** agent 
 
 ## Lab Architecture
 By the end of this lab, you will have:
-- A **Mail MCP** connection configured with only the tools needed to search and read messages
-- A sample email that the agent can find and summarize
+- A **Mail MCP** connection configured with the tools needed to send, search for, and read messages
+- A sample email sent by the agent, received in the connected mailbox, and summarized by the agent
 - A **Teams MCP** connection configured to find teams and channels and post a message
 - A property listing saved in Microsoft Lists and a sample update posted to a Teams channel
 
@@ -53,42 +53,51 @@ MCP servers expose tools that an agent can use to work with connected services. 
 
 ## Step 2: Add and Test the Mail MCP Server
 
-In this step, you will allow the agent to search and read a sample message without enabling mail-writing tools.
+In this step, you will configure the agent to send a sample message to your own mailbox, then search for and read it.
 
-### 2.1 Create a Sample Email
-1. Open Outlook using the account you will connect to the Mail MCP server
-2. Send an email to your own mailbox:
-   - **Subject:** `Property update - Copilot Studio test`
-   - **Body:** `A sample property at 1100 High Villas in Redmond is available for viewing.`
-3. Verify that the message appears in your mailbox
-
-> **Note:** Use only fictitious information for this exercise. Mail tools operate on the mailbox accessible through the configured connection.
-
-### 2.2 Add the Mail MCP Server
+### 2.1 Add the Mail MCP Server
 1. Return to the agent in Copilot Studio and select the **Tools** tab
 2. Select **+ Add a tool**, then select **Model Context Protocol**
 3. Search for `Mail` and select the **Mail** MCP server
-4. Verify the connection. If needed, select **Create new connection** and follow the sign-in and consent prompts.
+4. Verify that the connection uses the mailbox you will test. If needed, select **Create new connection** and follow the sign-in and consent prompts.
 5. Select **Add and configure**
 6. Review the available tools and turn off **Allow all**
-7. Enable only the tools for searching and retrieving messages:
+7. Enable only the tools for sending, searching, and retrieving messages:
+   - `mcp_MailTools_graph_mail_sendMail`
    - `mcp_MailTools_graph_mail_searchMessages`
    - `mcp_MailTools_graph_mail_getMessage`
-8. Leave sending, drafting, updating, and deleting tools disabled, then select **Save**
+8. Leave drafting, updating, deleting, and other unused tools disabled, then select **Save**
 
-> **Note:** Tool names may differ in your environment. Use the tools with the corresponding search and get-message functions, and consult the server's documentation if the names have changed. If Mail MCP is unavailable or your organization requires administrator consent, ask your administrator before continuing.
+> **Note:** Tool names may differ in your environment. Use the corresponding send, search, and get-message functions, and consult the server's documentation if the names have changed. If Mail MCP is unavailable or your organization requires administrator consent, ask your administrator before continuing.
 
-### 2.3 Test the Mail Connection
-1. Open the **Test your agent** pane, enable **Track between topics**, and start a new test session
-2. Enter:
+### 2.2 Send a Sample Email
+1. Open Outlook using the mailbox connected to Mail MCP and note its email address
+2. Choose a unique subject for this test, such as `Property update - Copilot Studio test` followed by your initials and the current time
+3. In Copilot Studio, open the **Test your agent** pane, enable **Track between topics**, and start a new test session
+4. Replace both placeholders below with your mailbox address and unique subject, then enter the prompt:
    ```text
-   Find the email with the subject "Property update - Copilot Studio test" and summarize it.
+   Send an email to [your mailbox address].
+   Subject: [your unique subject]
+   Body: A sample property at 1100 High Villas in Redmond is available for viewing.
    ```
-3. If prompted to connect or authorize the Mail MCP server, follow the prompts and select **Allow**
-4. Verify that the response reflects the sample message; compare it with the email in Outlook
-5. Review the test activity to verify that the Mail MCP search or read tool was used
+5. If prompted to authorize the connection, follow the prompts and select **Allow**. If asked to confirm the email, check the recipient and content before confirming.
+6. Review the test activity to verify that the Mail MCP send tool was used
+7. In Outlook, check **Sent Items** for the message and verify the recipient, subject, and body
 
-> **Note:** Disabling the Mail MCP write tools limits this server's actions; it does not restrict other enabled tools or the underlying mailbox permissions.
+> **Important:** Sending is a real action and may occur as soon as you submit the prompt. Verify the recipient before submitting, send only to your own test mailbox, and use fictitious information.
+
+### 2.3 Find and Read the Received Email
+1. In Outlook, verify that the message arrives in the connected mailbox's **Inbox**. Refresh or wait if it has not arrived yet.
+2. Return to the Test pane and enter the following prompt, replacing the placeholder with your unique subject:
+   ```text
+   Find the email with the subject "[your unique subject]" and summarize it.
+   ```
+3. Compare the response with the received email in Outlook
+4. Review the test activity to verify that a Mail MCP search or read tool was used
+
+> **Note:** Microsoft 365 delivers the email to the mailbox; Mail MCP searches and reads messages already in that mailbox. This lab does not configure automatic monitoring or a trigger for incoming mail. If the message cannot be found, check the connected account and exact subject, and try again after it arrives.
+
+> **Note:** Enabling the send tool allows this agent to send real email. Disabling other Mail MCP tools does not restrict other enabled tools or the underlying mailbox permissions.
 
 ---
 
@@ -164,9 +173,9 @@ In this step, you will update the agent instructions, create a property listing,
 ## Verification Checklist
 - [ ] Generative orchestration enabled
 - [ ] Agent authentication configured for the connected services
-- [ ] Sample email sent to and visible in the connected mailbox
-- [ ] **Mail MCP** added with message search and retrieval tools enabled
-- [ ] Mail MCP write tools left disabled
+- [ ] **Mail MCP** added with send, search, and retrieval tools enabled; unused tools left disabled
+- [ ] Agent sent a sample email to the connected mailbox
+- [ ] Sample email verified in **Sent Items** and received in **Inbox**
 - [ ] Sample email found and summarized in the Test pane
 - [ ] Team and `new-properties` channel available
 - [ ] **Teams MCP** added with team listing, channel listing, and channel posting tools enabled
@@ -181,7 +190,7 @@ In this step, you will update the agent instructions, create a property listing,
 In this lab, you successfully:
 
 1. ✅ Enabled generative orchestration for MCP tools
-2. ✅ Configured Mail MCP to search and read a sample email
+2. ✅ Configured Mail MCP to send, search for, and read a sample email
 3. ✅ Configured Teams MCP to post to a channel
 4. ✅ Created a property listing and verified it in Microsoft Lists
 5. ✅ Requested and verified a Teams property update
@@ -190,7 +199,8 @@ In this lab, you successfully:
 - **MCP servers:** Extend an agent with tools for connected services
 - **Generative orchestration:** Enables the agent to select MCP tools based on a user's request
 - **Tool selection:** Enable only the actions needed for the scenario
-- **Mail MCP:** Can search and retrieve messages available to its connection
+- **Mail MCP:** Can send email and search or retrieve messages available to its connection
+- **Email delivery:** Microsoft 365 delivers incoming messages; Mail MCP reads messages already in the mailbox
 - **Teams MCP:** Can locate a team and channel and post a message when permitted
 - **Instructions:** Guide tool use but do not guarantee execution
 - **Verification:** Check the mailbox, list, and Teams channel rather than relying only on the agent's response
@@ -204,7 +214,7 @@ Congratulations! 🎉 You have completed the **Use MCP Servers in Copilot Studio
 
 You now have hands-on experience with:
 - Adding and restricting MCP tools
-- Searching and reading sample email
+- Sending, searching for, and reading sample email
 - Connecting an agent to a Teams channel
 - Testing and verifying an MCP-backed workflow
 
