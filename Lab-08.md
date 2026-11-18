@@ -1,4 +1,4 @@
-# Lab: Create Property Listings from Files
+# Lab: Create Property Listings from Files with Prompts
 
 ## Overview
 In this hands-on lab, you will build a **Real Estate Booking Service** topic that accepts a property listing file, extracts structured details with a prompt, and creates a new item in the **Real Estate Properties** Microsoft List using an agent flow.
@@ -47,7 +47,7 @@ In this step, you will create a prompt that reads the uploaded file and returns 
 1. Under the file question, select **+** > **Add a tool** > **New prompt**.
 2. Configure the prompt:
    - **Name:** `Get Property Details from File`
-   - **Model:** `GPT Latest`
+   - **Model:** `GPT Latest`or select another approved model available in your environment
    - **Output:** `JSON`
 3. In **Instructions**, enter:
    ```text
