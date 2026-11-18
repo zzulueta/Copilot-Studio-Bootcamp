@@ -126,8 +126,7 @@ In this step, you will create a child agent inside the booking agent that answer
    For customer support questions covered by the support FAQ, use [Customer Support FAQ].
    ```
 3. Replace `[Customer Support FAQ]` with an agent reference by typing `/` and selecting **Customer Support FAQ**. If the reference picker is unavailable, use the agent's name instead.
-4. Select **Save** if prompted
-
+4. Select **Save**.
 ---
 
 ## Step 5: Test the Agents
