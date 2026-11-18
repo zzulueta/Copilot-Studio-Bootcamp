@@ -80,9 +80,8 @@ In this step, you will configure the agent to send a sample message to your own 
    Subject: [your unique subject]
    Body: A sample property at 1100 High Villas in Redmond is available for viewing.
    ```
-5. If prompted to authorize the connection, follow the prompts and select **Allow**. If asked to confirm the email, check the recipient and content before confirming.
-6. Review the test activity to verify that the Mail MCP send tool was used
-7. In Outlook, check **Sent Items** for the message and verify the recipient, subject, and body
+5. If prompted to authorize the connection, select **Allow**. 
+6. In Outlook, check **Sent Items** for the message and verify the recipient, subject, and body
 
 > **Important:** Sending is a real action and may occur as soon as you submit the prompt. Verify the recipient before submitting, send only to your own test mailbox, and use fictitious information.
 
@@ -106,7 +105,7 @@ In this step, you will configure the agent to send a sample message to your own 
 In this step, you will create a channel for property updates and configure the tools needed to post to it.
 
 ### 3.1 Create a Team and Channel
-1. Open Microsoft Teams and select **Chat** in the left navigation pane
+1. Open Microsoft Teams.
 2. Create a new team with:
    - **Name:** `copilot-studio-team`
    - **Description:** `Sample Copilot Studio team`
