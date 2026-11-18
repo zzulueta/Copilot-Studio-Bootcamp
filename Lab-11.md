@@ -52,8 +52,8 @@ The Outlook trigger monitors incoming mail. Mail MCP will be used later to send 
 ### 2.1 Configure the Trigger
 1. On the agent's **Overview** tab, go to **Triggers** and select **+ Add trigger**
 2. On the **Featured** tab, select **When a new email arrives (V3)** and select **Next**
-3. Set the trigger name to `When a booking request email arrives`
-4. Verify the Copilot Studio and Office 365 Outlook connections. If needed, use the ellipsis **…** to create a connection and sign in with your test account.
+3. Set the **Trigger name** to `When a booking request email arrives`
+4. Verify the Microsoft Copilot Studio and Office 365 Outlook connections exist. If needed, use the ellipsis **…** to create a new connection reference and sign in with your account.
 5. Select **Next** and configure:
    - **Folder:** `Inbox`
    - **Subject Filter:** `Create Booking Request`
