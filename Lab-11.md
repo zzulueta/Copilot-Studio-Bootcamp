@@ -57,14 +57,8 @@ The Outlook trigger monitors incoming mail. Mail MCP will be used later to send 
 5. Select **Next** and configure:
    - **Folder:** `Inbox`
    - **Subject Filter:** `Create Booking Request`
-6. Keep the default trigger message or payload containing the email **Body**, so the agent can read the booking details. If additional trigger instructions are available, add `Process this booking request email` without removing the body content.
+6. Note the **Additional instructions to the agent when it’s invoked by this trigger** section, which provides guidance to the agent on how to handle the incoming email.
 7. Select **Create trigger**, wait for it to be added, then select **Close**
-
-> **Note:** If **From** is not shown in the trigger setup, open the trigger's ellipsis **…** menu on the **Overview** tab, select **Edit in Power Automate**, and set **From** in the trigger's advanced parameters. Save the change. Use your own mailbox as the sender for this lab.
-
-> **Note:** If the payload is not visible during setup, inspect it during the trigger test. If the email body is missing, edit the trigger in Power Automate to include the **Body** dynamic content, then send a new test email.
-
-> **Note:** **Subject Filter** looks for the specified text in the subject; it is not an exact-match check. The acknowledgment subject in this lab is different so it does not match the booking-request filter.
 
 ### 2.2 Add Agent Instructions
 1. On the **Overview** tab, select **Edit** in the **Instructions** section
