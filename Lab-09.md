@@ -34,7 +34,7 @@ In this step, you will subscribe to the API and examine a sample request and res
 > **Note:** API availability, plan names, quotas, and pricing can change. If the API or plan is unavailable, check with your instructor before continuing.
 
 ### 1.2 Examine the Request
-1. In the **Find an Agent** section, select the **GET /agent/search** endpoint
+1. Search for the **GET /agent/search** endpoint
 2. Select the **Params** tab and review the available parameters
 3. Under **Query Params**, set `location` to `Redmond`, leave `page` as `1`, and remove the `agentName` value
 4. Review the **Code Snippets** tab and identify:
