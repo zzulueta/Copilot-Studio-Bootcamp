@@ -82,6 +82,7 @@ In this step, you will configure the agent to send a sample message to your own 
    ```
 5. If prompted to authorize the connection, select **Allow**. 
 6. In Outlook, check **Sent Items** for the message and verify the recipient, subject, and body
+7. Review the Activity tab to verify that a Mail MCP tool was used.
 
 > **Important:** Sending is a real action and may occur as soon as you submit the prompt. Verify the recipient before submitting, send only to your own test mailbox, and use fictitious information.
 
@@ -92,7 +93,7 @@ In this step, you will configure the agent to send a sample message to your own 
    Find the email with the subject "[your unique subject]" and summarize it.
    ```
 3. Compare the response with the received email in Outlook
-4. Review the test activity to verify that a Mail MCP search or read tool was used
+4. Review the Activity tab to verify that a Mail MCP tool was used.
 
 > **Note:** Microsoft 365 delivers the email to the mailbox; Mail MCP searches and reads messages already in that mailbox. This lab does not configure automatic monitoring or a trigger for incoming mail. If the message cannot be found, check the connected account and exact subject, and try again after it arrives.
 
