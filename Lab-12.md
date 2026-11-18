@@ -29,7 +29,7 @@ In this step, you will confirm that the expense agent can answer questions and i
 1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and select the appropriate environment
 2. Select **Agents** in the left navigation pane and open **Expense Claims Agent**
 3. On the **Knowledge** tab, verify that **Expenses_Policy.docx** has status **Ready**
-4. Open **Settings** and verify that **Let other agents connect to and use this one** is enabled. If it is off, enable it and save if prompted.
+4. Open **Settings** and select the **Generative AI** tab. Verify that **Let other agents connect to and use this one** is enabled. If it is off, enable it and save if prompted.
 5. In the **Test your agent** pane, start a new test session and ask:
    ```text
    According to Contoso's expense policy, what is the nightly hotel limit and what kind of hotel should I choose for a business trip?
