@@ -63,10 +63,10 @@ In this step, you will configure the agent to send a sample message to your own 
 5. Select **Add and configure**
 6. Review the available tools and turn off **Allow all**
 7. Enable only the tools for sending, searching, and retrieving messages:
-   - `mcp_MailTools_graph_mail_sendMail`
-   - `mcp_MailTools_graph_mail_searchMessages`
-   - `mcp_MailTools_graph_mail_getMessage`
-8. Leave drafting, updating, deleting, and other unused tools disabled, then select **Save**
+   - `SendEmailWithAttachments`
+   - `GetMessage`
+   - `SearchMessages`
+8. Disable all other tools, then select **Save**
 
 > **Note:** Tool names may differ in your environment. Use the corresponding send, search, and get-message functions, and consult the server's documentation if the names have changed. If Mail MCP is unavailable or your organization requires administrator consent, ask your administrator before continuing.
 
