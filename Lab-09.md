@@ -28,8 +28,8 @@ In this step, you will subscribe to the API and examine a sample request and res
 ### 1.1 Subscribe to the API
 1. Navigate to [RapidAPI](https://rapidapi.com/) and sign up or sign in
 2. Open the **API Hub** and search for `private-zillow`
-3. Select **Subscribe to Test** in the upper-right corner
-4. Review the available plans, select **Start Free Plan**, and select **Subscribe**
+3. Select **Subscribe to run**
+4. Review the available plans, select **Start Free Plan**, and select **Subscribe**. If prompted, select **Get started**.
 
 > **Note:** API availability, plan names, quotas, and pricing can change. If the API or plan is unavailable, check with your instructor before continuing.
 
