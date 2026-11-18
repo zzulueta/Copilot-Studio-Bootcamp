@@ -46,13 +46,6 @@ In this step, you will subscribe to the API and examine a sample request and res
 
 > **Important:** Treat the API key as a secret. Do not share it in chat, screenshots, source files, or sample JSON. The HTTP node in this lab stores the key in the topic configuration, so restrict author access and use a dedicated lab key. For production, use an approved connector or credential-management approach rather than embedding a key in a topic.
 
-### 1.3 Test the Endpoint
-1. Select **Test Endpoint**
-2. Inspect the JSON response and the returned agent information
-3. Copy the full successful JSON response for use as sample data later in the lab
-
-> **Note:** Results and the number of agents may vary. Do not proceed with an error response as sample JSON; check the subscription, request parameters, and quota first.
-
 ---
 
 ## Step 2: Create the Search Topic
