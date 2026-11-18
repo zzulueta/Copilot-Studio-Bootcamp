@@ -35,17 +35,13 @@ In this step, you will check that the existing tools are available and can run f
 1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and make sure you are in the appropriate environment
 2. Select **Agents** in the left navigation pane
 3. Open the **Real Estate Booking Service** agent
-4. Verify that **Generative orchestration** is enabled in **Settings** > **Generative AI**
+4. Verify that **Generative AI orchestration** is enabled in **Settings** > **Generative AI**
 
 ### 1.2 Verify the Existing Tools
-1. Select the **Tools** tab and open **Create Booking Request**
-2. Verify that the tool is enabled and has the four inputs listed in the prerequisites
-3. In the tool's **Additional details** (or **Details**), select **Maker-provided credentials** under **Credentials to use**, if not already selected. Verify that the flow's SharePoint connection can create items in **Real Estate Booking Requests**, then save any changes.
-4. Return to **Tools** and open the existing **Mail MCP** server
-5. Verify that the server is enabled and that `SendEmailWithAttachments`, or the equivalent send-email tool in your environment, is enabled
-6. Under **Additional details** > **Credentials to use**, select **Maker-provided credentials**. Verify that its connection uses your test mailbox and can send email, then save any changes.
-
-> **Important:** Autonomous runs cannot respond to a sign-in or approval prompt. If maker-provided credentials are unavailable or the tools cannot run without user interaction, stop and ask your administrator or instructor. Using maker credentials can also allow other agent users to access the maker's resources; review agent sharing and permissions before continuing.
+1. Select the **Tools** tab.
+2. Verify that the following tools are enabled:
+   - Create Booking Request
+   - Mail MCP
 
 ---
 
