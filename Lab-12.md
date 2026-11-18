@@ -97,7 +97,7 @@ In this step, you will create a child agent inside the booking agent that answer
 
 ### 4.1 Create the Child Agent
 1. On the **Real Estate Booking Service** agent, select the **Agents** tab
-2. Select **+ Add**
+2. Select **+ Add and agent**
 3. In the **Choose how you want to extend your agent** dialog, under **Create a child agent**, select **New child agent**
 4. Set the **Name** to `Customer Support FAQ`
 5. Under **When will this be used?**, keep **The agent chooses - Based on description**, then enter the description:
@@ -112,7 +112,7 @@ In this step, you will create a child agent inside the booking agent that answer
 ### 4.2 Add the FAQ Knowledge Source
 1. In the child agent's **Knowledge** section, select **+ Add**
 2. Upload **Contoso Support FAQ.docx**
-3. Select **Add to agent** if prompted
+3. Select **Add to agent**
 4. Select **Save** to save the child agent
 5. Verify that **Customer Support FAQ** appears on the **Agents** tab as a child agent and is enabled
 6. Reopen **Customer Support FAQ** and wait until the FAQ document's status in its **Knowledge** section is **Ready**. Indexing can take several minutes.
