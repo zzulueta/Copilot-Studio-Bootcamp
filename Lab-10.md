@@ -107,7 +107,7 @@ In this step, you will create a channel for property updates and configure the t
 
 ### 3.1 Create a Team and Channel
 1. Open Microsoft Teams.
-2. Create a new team with:
+2. Go to **Your teams and channels** and create a new team with:
    - **Name:** `copilot-studio-team`
    - **Description:** `Sample Copilot Studio team`
 3. Create a channel named `new-properties` in the team. If the team creation screen offers a first-channel field, you can enter the name there.
