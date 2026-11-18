@@ -1,11 +1,12 @@
-# Lab: Connect Agents in Copilot Studio
+# Lab: Add Connected and Child Agents in Copilot Studio
 
 ## Overview
-In this hands-on lab, you will connect the existing **Expense Claims Agent** to the **Real Estate Booking Service** agent. You will configure the booking agent to delegate employee expense-policy questions to the connected agent, then test how the agents work together.
+In this hands-on lab, you will extend the **Real Estate Booking Service** agent with other agents. You will connect the existing **Expense Claims Agent** so the booking agent can delegate employee expense-policy questions, then create a **Customer Support FAQ** child agent that answers customer support questions from an FAQ document. Finally, you will test how the agents work together.
 
 **Prerequisites:**
 - A **Real Estate Booking Service** agent and an **Expense Claims Agent** in the same Copilot Studio environment
 - The **Expenses_Policy.docx** document added to the Expense Claims Agent as a knowledge source, with status **Ready**
+- The **Contoso Support FAQ.docx** document from the lab files for this lab
 - Permission to edit the booking agent and to use and publish the Expense Claims Agent
 - Generative orchestration enabled for the booking agent
 
@@ -15,9 +16,12 @@ In this hands-on lab, you will connect the existing **Expense Claims Agent** to 
 By the end of this lab, you will have:
 - The **Real Estate Booking Service** as the primary agent
 - The existing **Expense Claims Agent** connected as a separate, published agent
-- Expense-policy questions delegated to the connected agent
+- A **Customer Support FAQ** child agent, grounded in the support FAQ, that exists only within the booking agent
+- Expense-policy questions delegated to the connected agent and support questions delegated to the child agent
 - Real estate questions handled by the booking agent's existing capabilities
-- A tested interaction verified in the activity map
+- Tested interactions verified in the activity map
+
+> **Note:** A **connected agent** is a separate agent that is published and managed independently and can be reused by other agents. A **child agent** is a lightweight agent that lives inside the main agent and groups its own instructions, knowledge, and tools for a single task. It is not published separately.
 
 ---
 
@@ -87,27 +91,75 @@ In this step, you will guide the booking agent to use the connected agent for ex
 
 ---
 
-## Step 4: Test the Connected Agents
+## Step 4: Add a Child Agent for FAQ Questions
 
-### 4.1 Test an Expense-Policy Question
+In this step, you will create a child agent inside the booking agent that answers customer support questions using only the support FAQ.
+
+### 4.1 Create the Child Agent
+1. On the **Real Estate Booking Service** agent, select the **Agents** tab
+2. Select **+ Add**
+3. In the **Choose how you want to extend your agent** dialog, under **Create a child agent**, select **New child agent**
+4. Set the **Name** to `Customer Support FAQ`
+5. Under **When will this be used?**, keep **The agent chooses - Based on description**, then enter the description:
+   ```text
+   Answers customer support questions covered by the Contoso Support FAQ, such as service policies, using contractors, and resolving customer issues. Do not use for property listings, prices, booking showings, or expense policies.
+   ```
+6. In **Instructions**, enter:
+   ```text
+   Answer customer support questions using only the Contoso Support FAQ knowledge source. Keep answers short and clear. If the FAQ does not cover the question, say that you don't have that information and suggest contacting customer support. Do not guess or invent policies.
+   ```
+
+### 4.2 Add the FAQ Knowledge Source
+1. In the child agent's **Knowledge** section, select **+ Add**
+2. Upload **Contoso Support FAQ.docx**
+3. Select **Add to agent** if prompted
+4. Select **Save** to save the child agent
+5. Verify that **Customer Support FAQ** appears on the **Agents** tab as a child agent and is enabled
+6. Reopen **Customer Support FAQ** and wait until the FAQ document's status in its **Knowledge** section is **Ready**. Indexing can take several minutes.
+
+> **Note:** Knowledge added to a child agent is used only when that child agent runs. The descriptions of the child agent and the connected agent should not overlap, so the orchestrator can choose the right one. Child agents follow the main agent's general knowledge setting.
+
+### 4.3 Update the Booking Agent Instructions
+1. On the **Overview** tab, select **Edit** in the **Instructions** section
+2. Append the following to the existing instructions:
+   ```text
+   For customer support questions covered by the support FAQ, use [Customer Support FAQ].
+   ```
+3. Replace `[Customer Support FAQ]` with an agent reference by typing `/` and selecting **Customer Support FAQ**. If the reference picker is unavailable, use the agent's name instead.
+4. Select **Save** if prompted
+
+---
+
+## Step 5: Test the Agents
+
+### 5.1 Test an Expense-Policy Question
 1. Open the **Test your agent** pane for **Real Estate Booking Service** and start a new test session
 2. Ask:
    ```text
    According to Contoso's expense policy, what is the nightly hotel limit and what kind of hotel should I choose for a business trip?
    ```
-3. Review the **Activity** tab or activity map and verify that **Expense Claims Agent** was invoked
+3. Review the **Activity** tab and verify that **Expense Claims Agent** was invoked
 4. Compare the answer with the Expenses Policy and the response from your direct test. With the provided policy, verify that it states **$150 per night** and describes a standard or moderate hotel.
 
-> **Note:** A plausible answer alone does not prove that the connected agent was used. Citations are not always retained when an answer is passed back to the primary agent, so use the activity map and the policy to verify the result.
+### 5.2 Test an FAQ Question
+1. Start a new test session
+2. Ask:
+   ```text
+   Can I use my own contractor for the property?
+   ```
+3. Review the **Activity** tab and verify that **Customer Support FAQ** was invoked, not **Expense Claims Agent**
+4. Open **Contoso Support FAQ.docx** and verify that the answer matches the FAQ
 
-### 4.2 Test a Real Estate Question
+### 5.3 Test a Real Estate Question
 1. Start a new test session
 2. Ask a question about a property in your existing knowledge source. For example, if your list contains **555 Oak Lane**, ask:
    ```text
    What is the asking price of 555 Oak Lane?
    ```
-3. Verify in the activity map that the expense agent was not invoked
-4. If the agent provides a price, compare it with the current property data. If the information is unavailable, verify that the agent says so rather than guessing.
+3. Verify in the **Activity** tab that neither the expense agent nor the FAQ child agent was invoked
+4. If the agent provides a price, compare it with the current property data.
+
+> **Troubleshooting:** If the wrong agent is invoked, make the descriptions of the connected agent and the child agent more distinct, check the booking agent's instructions for conflicts, then start a new test session and try again.
 
 ---
 
@@ -118,9 +170,13 @@ In this step, you will guide the booking agent to use the connected agent for ex
 - [ ] Generative orchestration is enabled for Real Estate Booking Service
 - [ ] Existing Expense Claims Agent added and enabled as a connected agent
 - [ ] Connected agent description and booking agent instructions identify expense questions
+- [ ] **Customer Support FAQ** child agent created with a description and instructions
+- [ ] **Contoso Support FAQ.docx** added to the child agent with status **Ready**
+- [ ] Booking agent instructions reference the child agent
 - [ ] Expense question invokes the connected agent in the activity map
 - [ ] Answer checked against the Expenses Policy
-- [ ] Real estate question does not invoke the expense agent
+- [ ] FAQ question invokes the child agent and the answer matches the FAQ
+- [ ] Real estate question invokes neither the expense agent nor the child agent
 - [ ] Existing real estate knowledge sources and capabilities retained
 
 ---
@@ -132,13 +188,16 @@ In this lab, you successfully:
 1. ✅ Verified the existing expense agent and its published knowledge
 2. ✅ Connected it to the real estate booking agent
 3. ✅ Updated the description and instructions to guide delegation
-4. ✅ Tested an expense question and verified the connected agent was invoked
-5. ✅ Checked that a real estate question remained with the booking agent
+4. ✅ Created a child agent grounded in a support FAQ
+5. ✅ Tested expense and FAQ questions and verified the correct agent was invoked
+6. ✅ Checked that a real estate question remained with the booking agent
 
 ### Key Learnings
 - **Connected agents:** Reuse an existing agent without creating another agent or copying its knowledge
+- **Child agents:** Group instructions and knowledge for a single task inside the main agent, without separate publishing
+- **Choosing an approach:** Use a connected agent when it must be reused or managed separately; use a child agent for a focused task within one agent
 - **Published versions:** The primary agent calls the connected agent's published version
-- **Descriptions and instructions:** Help the orchestrator decide which agent should handle a request
+- **Descriptions and instructions:** Help the orchestrator decide which agent should handle a request; keep them distinct to avoid overlap
 - **Conversation history:** Can be excluded from a connected-agent call when it is not needed
 - **Testing:** The activity map verifies delegation; compare generated answers with the source
 - **Permissions:** Agent access, authentication, and sharing affect who can use the connection
@@ -147,10 +206,11 @@ In this lab, you successfully:
 
 ## Lab Completion Badge
 
-Congratulations! 🎉 You have completed the **Connect Agents in Copilot Studio** lab.
+Congratulations! 🎉 You have completed the **Add Connected and Child Agents in Copilot Studio** lab.
 
 You now have hands-on experience with:
 - Connecting an existing agent
+- Creating a child agent grounded in an FAQ
 - Guiding requests to the appropriate agent
 - Testing delegation and checking grounded answers
 - Preserving the primary agent's existing capabilities
