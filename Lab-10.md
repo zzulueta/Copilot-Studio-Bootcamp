@@ -123,9 +123,9 @@ In this step, you will create a channel for property updates and configure the t
 5. Select **Add and configure**
 6. Review the available tools and turn off **Allow all**
 7. Enable only the tools needed to list teams, list channels, and post a channel message:
-   - `mcp_graph_teams_listTeams`
-   - `mcp_graph_teams_listChannels`
-   - `mcp_graph_teams_postChannelMessage`
+   - `ListTeams`
+   - `ListChannels`
+   - `SendMessageToChannel`
 8. Leave the other tools disabled and select **Save**
 
 > **Note:** Tool names may differ in your environment. The connection must have access to the chosen team and permission to post in the channel. If the server is unavailable or consent is required, ask your administrator before continuing.
