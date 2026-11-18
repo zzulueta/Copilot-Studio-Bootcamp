@@ -57,7 +57,6 @@ The Outlook trigger monitors incoming mail. Mail MCP will be used later to send 
 5. Select **Next** and configure:
    - **Folder:** `Inbox`
    - **Subject Filter:** `Create Booking Request`
-   - **From:** Your test mailbox address
 6. Keep the default trigger message or payload containing the email **Body**, so the agent can read the booking details. If additional trigger instructions are available, add `Process this booking request email` without removing the body content.
 7. Select **Create trigger**, wait for it to be added, then select **Close**
 
