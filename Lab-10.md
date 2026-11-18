@@ -141,7 +141,7 @@ In this step, you will update the agent instructions, create a property listing,
 2. Select **Edit** in the **Instructions** section
 3. Add the following to the existing instructions:
    ```text
-   After a property listing has been created, use the Teams MCP tool to post its details to the new-properties channel in copilot-studio-team when the user requests an update. Use only confirmed property details and ask for any missing information. Do not claim that a message was posted unless the tool succeeds.
+   After a property listing has been created, use the Teams MCP tool to post its details to the new-properties channel in copilot-studio-team. Use only confirmed property details. Do not claim that a message was posted unless the tool succeeds.
    ```
 4. Select **Save**
 
