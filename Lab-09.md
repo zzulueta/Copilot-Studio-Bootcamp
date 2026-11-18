@@ -36,7 +36,7 @@ In this step, you will subscribe to the API and examine a sample request and res
 ### 1.2 Examine the Request
 1. Search for the **GET /agent/search** endpoint
 2. Select the **Params** tab and review the available parameters
-3. Under **Query Params**, set `location` to `Redmond`, leave `page` as `1`, and remove the `agentName` value
+3. Under **Query Params**, set `location` to `Redmond`, leave `page` as `1`, and remove the `agentName` value. Select **Run**.
 4. Review the **Code Snippets** tab and identify:
    - The **GET** method
    - The URL and query parameters, including `location=Redmond` and `page=1`
