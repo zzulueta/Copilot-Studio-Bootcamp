@@ -102,28 +102,24 @@ In this step, you will send matching and nonmatching emails, test the matching e
 1. Return to the agent's **Overview** tab and select the **Test trigger** icon beside **When a booking request email arrives**
 2. Find the event for the `Create Booking Request` email. Verify that the `Client booking` email is not listed for this trigger.
 3. Select the matching event and select **Start testing** once
-4. Review the test activity. Verify that **Create Booking Request** receives the property name, viewer name, viewer email, and requested date and time, and that the Mail MCP send-email tool runs after the flow succeeds.
-
-> **Note:** Other matching events from earlier tests may appear. Select the event containing your unique test identifier. If a connection or action fails, inspect the activity before retrying; do not assume the request or email succeeded.
+4. Review the Activity tab. Verify that **Create Booking Request** receives the property name, viewer name, viewer email, and requested date and time, and that the Mail MCP send-email tool runs after the flow succeeds.
 
 ### 3.3 Verify the List and Email
 1. Open **Real Estate Booking Requests** in Microsoft Lists
-2. Verify that a new item contains the property name, `Test Viewer` and identifier, test email address, and requested date and time from the matching email
-3. Verify that no item was created for the `Control Viewer` email
-4. In Outlook, check **Sent Items** and **Inbox** for the `Booking request received` acknowledgment
-5. Verify that the acknowledgment contains the requested details and describes a received request rather than a scheduled showing
+2. Verify that a new item contains the property name, viewer name, viewer email address, and requested date and time from the matching email
+3. In Outlook, check **Sent Items** and **Inbox** of viewer email for the `Booking request received` acknowledgment
+4. Verify that the email contains the requested details.
 
 ---
 
 ## Verification Checklist
 - [ ] Existing **Create Booking Request** flow and Mail MCP send tool enabled with appropriate connections
-- [ ] Trigger configured for the test mailbox, `Inbox`, and the booking-request subject filter
+- [ ] Trigger configured for the test mailbox and the booking-request subject filter
 - [ ] Trigger payload includes the email body
 - [ ] Agent instructions map all four email fields to the flow inputs
 - [ ] Matching email selected for a single trigger test; nonmatching email excluded
 - [ ] Booking request verified in **Real Estate Booking Requests**
 - [ ] Mail MCP acknowledgment verified in Outlook
-- [ ] Optional: Published trigger tested with a new event
 
 ---
 
