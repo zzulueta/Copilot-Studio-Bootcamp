@@ -5,7 +5,6 @@ In this hands-on lab, you will build a topic in the **Real Estate Booking Servic
 
 **Prerequisites:**
 - A **Real Estate Booking Service** agent in a Copilot Studio environment
-- Permission to create topics, send HTTP requests, and create and run prompts in that environment
 - Access to a RapidAPI account and the **private-zillow** API
 
 > **Important:** Review the API provider's terms, plan limits, and any charges before subscribing. Only use API data in the prompt if your organization's policies and the provider's terms permit it.
