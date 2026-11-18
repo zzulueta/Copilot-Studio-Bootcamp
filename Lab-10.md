@@ -56,8 +56,8 @@ MCP servers expose tools that an agent can use to work with connected services. 
 In this step, you will configure the agent to send a sample message to your own mailbox, then search for and read it.
 
 ### 2.1 Add the Mail MCP Server
-1. Return to the agent in Copilot Studio and select the **Tools** tab
-2. Select **+ Add a tool**, then select **Model Context Protocol**
+1. Return to the agent in Copilot Studio and select the **Tools** tab.
+2. Select **+ Add a tool**, then select the **Model Context Protocol** tab.
 3. Search for `Mail` and select the **Mail** MCP server
 4. Verify that the connection uses the mailbox you will test. If needed, select **Create new connection** and follow the sign-in and consent prompts.
 5. Select **Add and configure**
