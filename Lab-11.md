@@ -88,7 +88,7 @@ In this step, you will send matching and nonmatching emails, test the matching e
      I want to make a property booking request:
      Property: 1100 High Villas
      Name: Test Viewer [unique identifier]
-     Email: [your test mailbox address]
+     Email: [your test receiver mailbox address]
      Date/Time: [future date, time, and time zone]
      ```
 3. Send a second email to the same mailbox with a subject that does not contain the filter text:
@@ -97,11 +97,11 @@ In this step, you will send matching and nonmatching emails, test the matching e
      ```text
      My client wants to see a property:
      Property: 1100 High Villas
-     Name: Control Viewer [same unique identifier]
-     Email: [your test mailbox address]
+     Name: Test Viewer [same unique identifier]
+     Email: [your test receiver mailbox address]
      Date/Time: [same future date, time, and time zone]
      ```
-4. Verify that both emails arrive in **Inbox**
+4. Verify that both emails arrive in the test **Inbox**
 
 ### 3.2 Run the Matching Trigger
 1. Return to the agent's **Overview** tab and select the **Test trigger** icon beside **When a booking request email arrives**
