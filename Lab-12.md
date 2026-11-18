@@ -54,7 +54,7 @@ In this step, you will add the existing expense agent to the booking agent. You 
 
 1. On the **Real Estate Booking Service** agent, select the **Agents** tab
 2. Select **+ Add**.
-3. Under **Select an agent in your environment**, choose the Copilot Studio agent option if prompted, then select **Expense Claims Agent**
+3. Under **Select an agent in your environment**, select **Expense Claims Agent**
 4. Review the agent's details and update its description for the booking agent:
    ```text
    Answer questions about expense policies and submitting expense claims, including eligible expenses, accommodation, receipts, and reimbursement guidelines.
