@@ -150,7 +150,7 @@ In this step, you will combine the user's question and API data in a prompt, dis
 
 ### 4.3 Connect the Prompt Inputs and Output
 1. In the prompt node, under **Inputs**, select the ellipsis **…** for **Prompt (String)** and select **Formula**
-2. Enter:
+2. Enter and Insert:
    ```powerfx
    Concatenate(
        Topic.UserQuery,
