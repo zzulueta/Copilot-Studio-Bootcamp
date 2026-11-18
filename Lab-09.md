@@ -43,6 +43,7 @@ In this step, you will subscribe to the API and examine a sample request and res
    - The `x-rapidapi-host` and `x-rapidapi-key` headers
    - The absence of a request body
 5. Keep the host value and API key available for the HTTP request configuration
+6. Keep the JSON response available for later use in the lab.
 
 > **Important:** Treat the API key as a secret. Do not share it in chat, screenshots, source files, or sample JSON. The HTTP node in this lab stores the key in the topic configuration, so restrict author access and use a dedicated lab key. For production, use an approved connector or credential-management approach rather than embedding a key in a topic.
 
