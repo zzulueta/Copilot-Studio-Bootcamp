@@ -40,7 +40,7 @@ By the end of this lab, you will have:
 
 ---
 
-## Step 2: Create an Agent Using Natural Language
+## Step 2: Create an Agent
 
 In this step, you'll use Copilot Studio to create a new agent. The agent will initially have very limited capabilities, which you'll extend later in the lab.
 
